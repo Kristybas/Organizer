@@ -1,1 +1,33 @@
 // Specific CSS for your home-page
+
+
+
+.container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.banner {
+
+  width: 1200px;
+  height: 300px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.00);
+  opacity: var(--sds-size-stroke-border);
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  p {
+    padding-right: 10px;
+    text-align: end;
+
+
+  }
+}
+
+#accroche {
+
+}
