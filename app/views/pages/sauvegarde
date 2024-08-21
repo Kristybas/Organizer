@@ -1,0 +1,1 @@
+c <%= current_user.phone %> <%= current_user.address %> <%= current_user.first_name %> <%= current_user.last_name %>
