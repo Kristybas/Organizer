@@ -1,0 +1,20 @@
+<%= form_with(model: @app, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :nom %>
+    <%= form.text_field :nom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tuto %>
+    <%= form.text_field :tuto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url_redirection %>
+    <%= form.text_field :url_redirection %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

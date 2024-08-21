@@ -1,0 +1,61 @@
+<h1>Créer une nouvelle App utilisateur</h1>
+
+<%= form_with(model: @user_app, local: true) do |form| %>
+  <% if @user_app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_app.errors.count, "error") %> interdit(s) de sauvegarder cette app utilisateur :</h2>
+
+      <ul>
+        <% @user_app.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_prelevement %>
+    <%= form.date_select :date_prelevement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_renouvellement %>
+    <%= form.date_select :date_renouvellement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :montant %>
+    <%= form.number_field :montant %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rib %>
+    <%= form.text_field :rib %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Créer' %>
+  </div>
+<% end %>
+
+<%= link_to 'Retour', root_path %>
