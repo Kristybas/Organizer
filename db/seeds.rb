@@ -111,3 +111,13 @@ caf.save!
  }
 
  sfr.save!
+
+ p "crating orange app"
+ orange = App.new
+ orange.nom = "Orange"
+ orange.url_redirections = {
+  addresse: "https://www.orange.be/fr/produits-et-services/internet-tv-mobile/demenagement-love?utm_source=google&utm_medium=cpc&utm_campaign=b2c-act-fr-love-overview-alwayson-bra-movers&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnMTi60Iv42i1gtsKfnYSrvCaQGvvLdX2kgKii0Lq-7DHBrQPxZQCjYaAofCEALw_wcB" ,
+  rib: "https://orangeetmoi.orange.fr/"
+  }
+
+  orange.save!
