@@ -42,7 +42,7 @@
     <hr class="thick-hr"s>
 
   <div class="app-cards-container">
-    <% @apps.each do |app| %>
+    <% @user_apps.each do |app| %>
       <div class="app-card" data-app-id="<%= app.id %>">
         <div class="app-card-header">
           <h3><%= app.name %></h3>
