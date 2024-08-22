@@ -8,11 +8,14 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-# ENERGIES
+# ENERGIES<<<<<<< seed-v2
+
+
+App.destroy_all
 
 p "creating EDF app"
 edf = App.new
-edf.nom = "EDF"
+edf.name = "EDF"
 edf.url_redirections = {
   rib: "https://www.edf.fr/entreprises/faq-entreprises/contrat/modifier-votre-contrat/comment-communiquer-un-nouveau-rib-pour-payer-vos-factures-edf-en-ligne"
 }
@@ -22,7 +25,7 @@ edf.save!
 
 p "creating ENGIE app"
 engie = App.new
-engie.nom =	"ENGIE"
+engie.name =	"ENGIE"
 engie.url_redirections = {
   address: "https://particuliers.engie.fr/aide-contact.html?question=vous-demenagez-quelles-demarches-effectuer",
   rib: "https://particuliers.engie.fr/aide-contact.html?question=comment-changer-mes-coordonnees-bancaires"
@@ -32,8 +35,9 @@ engie.save!
 
 p "creating ENI app"
 eni = App.new
-eni.nom = "ENI"
-eni.url_redirections = {
+eni.name = "ENI"
+eni.url_redirections ={
+
   addresse:"https://fr.eni.com/particuliers/demenager-eni" ,
   rib: "https://fr.eni.com/particuliers/faq/paiements"
 }
@@ -44,11 +48,13 @@ eni.save!
 # Administrations Publique
 
 p "creating Impot app"
+
 impot_gouv = App.new
 impot_gouv.nom = "Impot_gouv"
 impot_gouv.url_redirections = {
 addresse: "https://www.impots.gouv.fr/particulier/questions/je-viens-de-demenager-quelles-demarches-dois-je-accomplir-aupres-de",
 rib: "https://www.impots.gouv.fr/particulier/questions/comment-modifier-mes-coordonnees-bancaires-mon-rib-pour-payer-mes-impots#:~:text=Pour%20effectuer%20cette%20modification%2C%20rendez,%C3%A0%20jour%20vos%20coordonn%C3%A9es%20bancaires%20%C2%BB."
+
 }
 
 impot_gouv.save!
@@ -57,7 +63,7 @@ impot_gouv.save!
 p"creating AMELI app"
 ameli = App.new
 ameli.nom = "Ameli"
-ameli.url_redirections  = {
+ameli.url_redirections = {
   addresse: "https://www.ameli.fr/assure/adresses-et-contacts/un-changement-de-situation/declarer-un-changement-de-coordonnees/declarer-une-nouvelle-adresse-postale" ,
  rib:"https://www.ameli.fr/assure/adresses-et-contacts/un-changement-de-situation/declarer-un-changement-de-coordonnees/declarer-un-changement-de-compte-bancaire"
 }
@@ -69,7 +75,7 @@ ameli.save!
 p "creating France Travail app"
 
 france_travail = App.new
-france_travail.nom = "France Travail"
+france_travail.name = "France Travail"
 france_travail.url_redirections = {
   address: "https://www.francetravail.fr/faq/candidat/ma-situation-change/actualisation-et-changement-de-s/changement-de-situation-administ/je-change-dadresse--que-dois-je.html" ,
   rib: "https://www.francetravail.fr/faq/candidat/ma-situation-change/actualisation-et-changement-de-s/changement-de-situation-administ/changer-de-rib-france-travail.html"
@@ -81,7 +87,7 @@ france_travail.save!
 
 p "creating CAF app"
 caf = App.new
-caf.nom = "CaF"
+caf.name = "CaF"
 caf.url_redirections = {
   address: "https://www.caf.fr/allocataires/aides-et-demarches/ma-situation/logement/je-demenage" ,
   rib: "https://www.caf.fr/allocataires/caf-de-la-marne/offre-de-service/vie-personnelle/vous-changez-de-domiciliation-bancaire-prevenez-la-caf-au-plus-vite#:~:text=d'Allocations%20familiales-,Vous%20changez%20de%20domiciliation%20bancaire%2C%20pr%C3%A9venez%20la%20Caf%20au%20plus,paiement%20de%20vos%20prestations%20mensuelles"
@@ -93,7 +99,7 @@ caf.save!
 
  p "creating La POSTE app"
  laposte = App.new
- laposte.nom = "laPoste"
+ laposte.name = "laPoste"
  laposte.url_redirections = {
 
  addresse: "https://www.laposte.fr/demenager/comment-faire-changement-adresse"
@@ -197,7 +203,7 @@ societe_generale.save!
 
  p "creating SFR app"
  sfr = App.new
- sfr.nom = "SFR"
+ sfr.name = "SFR"
  sfr.url_redirections = {
   addresse: "https://www.sfr.fr/offre-internet/demenagement?esl-k=google%7Cng%7Cc443888133540%7Cmp%7Ckd%C3%A9m%C3%A9nagement%20sfr%7Cp%7Ct%7Cdc%7Ca105645464840%7Cg10371243279&gclsrc=aw.ds&sfrcpid=t1_google_fixe&utm_source=google&utm_medium=cpc&utm_campaign=m_fixe&utm_term=&utm_content=&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNiPci-kbJHzepewqPvkZaTG52W09zz3Hho8UpppHxHRHecti0EGYwaAs4JEALw_wcB&r=61670133" ,
   rib: "https://assistance.sfr.fr/gestion-client/offre-contrat/maj-coordonnees-bancaires-espace-client.html"
@@ -208,7 +214,7 @@ societe_generale.save!
 
  p "creating ORANGE app"
  orange = App.new
- orange.nom = "Orange"
+ orange.name = "Orange"
  orange.url_redirections = {
   addresse: "https://www.orange.be/fr/produits-et-services/internet-tv-mobile/demenagement-love?utm_source=google&utm_medium=cpc&utm_campaign=b2c-act-fr-love-overview-alwayson-bra-movers&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnMTi60Iv42i1gtsKfnYSrvCaQGvvLdX2kgKii0Lq-7DHBrQPxZQCjYaAofCEALw_wcB" ,
   rib: "https://orangeetmoi.orange.fr/"
