@@ -17,8 +17,10 @@ class UserAppsController < ApplicationController
 
   # POST /user_apps
   def create
+
     @user_app = UserApp.new(user_app_params)
     @user_app.user = current_user
+    raise
     if @user_app.save
       redirect_to @user_app, notice: 'UserApp was successfully created.'
     else
