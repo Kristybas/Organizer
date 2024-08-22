@@ -42,17 +42,17 @@
     <hr class="thick-hr"s>
 
   <div class="app-cards-container">
-    <% @apps.each do |app| %>
+    <% @user_apps.each do |app| %>
       <div class="app-card" data-app-id="<%= app.id %>">
         <div class="app-card-header">
           <h3><%= app.name %></h3>
-          <p><%= app.short_description %></p>
+          <%# <p><%= app.short_description %></p> %>
         </div>
         <div class="app-card-details">
-          <p><strong>Description:</strong> <%= app.description %></p>
+          <%# <p><strong>Description:</strong> <%= app.description %></p> %>
           <p><strong>Date de création:</strong> <%= app.created_at.strftime('%d %B %Y') %></p>
           <p><strong>Dernière mise à jour:</strong> <%= app.updated_at.strftime('%d %B %Y') %></p>
-          <%= link_to 'Voir les détails', app_path(app), class: 'btn btn-primary' %>
+          <%# <%= link_to 'Voir les détails', app_path(app), class: 'btn btn-primary' %> %>
         </div>
       </div>
     <% end %>

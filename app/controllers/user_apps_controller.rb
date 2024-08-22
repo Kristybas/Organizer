@@ -20,9 +20,8 @@ class UserAppsController < ApplicationController
 
     @user_app = UserApp.new(user_app_params)
     @user_app.user = current_user
-    raise
     if @user_app.save
-      redirect_to @user_app, notice: 'UserApp was successfully created.'
+      redirect_to root_path, notice: 'UserApp was successfully created.'
     else
       render :new
     end
@@ -35,7 +34,7 @@ class UserAppsController < ApplicationController
   # PATCH/PUT /user_apps/:id
   def update
     if @user_app.update(user_app_params)
-      redirect_to @user_app, notice: 'UserApp was successfully updated.'
+      redirect_to root_path, notice: 'UserApp was successfully updated.'
     else
       render :edit
     end
@@ -57,8 +56,7 @@ class UserAppsController < ApplicationController
   # Méthode strong parameters pour permettre uniquement les attributs autorisés
   def user_app_params
     params.require(:user_app).permit(
-      :user_id, :app_id, :phone, :address, :email,
-      :date_prelevement, :date_renouvellement, :montant, :rib, :name
+      :user_id, :app_id, :phone, :address, :email, :date_prelevement, :date_renouvellement, :montant, :rib, :name
     )
   end
 end
