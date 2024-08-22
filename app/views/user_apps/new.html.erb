@@ -1,61 +1,25 @@
-<h1>Créer une nouvelle App utilisateur</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?w=600&auto=format&fit=cro[…]3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww);">
 
-<%= form_with(model: @user_app, local: true) do |form| %>
-  <% if @user_app.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user_app.errors.count, "error") %> interdit(s) de sauvegarder cette app utilisateur :</h2>
+    <p>L'administratif n'a jamais été aussi simple</p>
 
-      <ul>
-        <% @user_app.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+</div>
+<div class="formulaire">
+<h1 id="titre">Ajout d'une demarche</h1>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
 
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
-  </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date_prelevement %>
-    <%= form.date_select :date_prelevement %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date_renouvellement %>
-    <%= form.date_select :date_renouvellement %>
-  </div>
-
-  <div class="field">
-    <%= form.label :montant %>
-    <%= form.number_field :montant %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rib %>
-    <%= form.text_field :rib %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit 'Créer' %>
-  </div>
+<%= simple_form_for @user_app do |f| %>
+  <%= f.input :name, placeholder: "Nom",label: false %>
+  <%= f.input :phone, placeholder: "Téléphone",label: false %>
+  <%= f.input :address, placeholder: "Adresse",label: false %>
+  <%= f.input :email, placeholder: "Email",label: false %>
+  <%= f.input :date_prelevement, placeholder: "Date de prélèvement",label: false %>
+  <%= f.input :date_renouvellement, placeholder: "Date de renouvellement",label: false %>
+  <%= f.input :montant, placeholder: "Montant",label: false %>
+  <%= f.input :rib, placeholder: "RIB",label: false %>
+  <%= f.button :submit %>
 <% end %>
+</div>
 
 <%= link_to 'Retour', root_path %>
