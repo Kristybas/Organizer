@@ -10,6 +10,7 @@
 
 
 <%= simple_form_for @user_app do |f| %>
+  <%= f.input :app_id, collection: App.all ,label: false  %>
   <%= f.input :name, placeholder: "Nom",label: false %>
   <%= f.input :phone, placeholder: "Téléphone",label: false %>
   <%= f.input :address, placeholder: "Adresse",label: false %>
