@@ -48,12 +48,13 @@ impot.url_redirections = {
   rib: "https://www.impots.gouv.fr/particulier/questions/comment-modifier-mes-coordonnees-bancaires-mon-rib-pour-payer-mes-impots#:~:text=Pour%20effectuer%20cette%20modification%2C%20rendez,%C3%A0%20jour%20vos%20coordonn%C3%A9es%20bancaires%20%C2%BB."
 }
 
-impot.save!
+impot_gouv.save!
 
 p"creating Ameli app"
 ameli = App.new
-ameli.name = "Ameli"
-ameli.url_redirections  ={
+ameli.nom = "Ameli"
+ameli.url_redirections = {
+
   addresse: "https://www.ameli.fr/assure/adresses-et-contacts/un-changement-de-situation/declarer-un-changement-de-coordonnees/declarer-une-nouvelle-adresse-postale" ,
  rib:"https://www.ameli.fr/assure/adresses-et-contacts/un-changement-de-situation/declarer-un-changement-de-coordonnees/declarer-un-changement-de-compte-bancaire"
 }
