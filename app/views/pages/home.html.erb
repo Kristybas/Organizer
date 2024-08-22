@@ -3,26 +3,29 @@
 
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?w=600&auto=format&fit=cro[…]3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww);">
 
-    <p>L'administratif n'a jamais été aussi simple</p>
+    <h3>L'administratif n'a jamais été aussi simple</h3>
 
   </div>
 
   <div class="coordonnees" >
     <% if user_signed_in? %>
             <h2>Mes coordonnées actuels</h2>
+            <hr class="thick-hr"s>
             <div class="row">
       <div class="col-md-6">
         <ul>
-          <li><%= current_user.last_name %></li>
-          <li><%= current_user.first_name %></li>
-          <li><%= current_user.email %></li>
+        <li>
+          <i class="fa-regular fa-address-card" style="margin-right: 10px"></i>
+          <%= "#{current_user.last_name} #{current_user.first_name}" %>
+        </li>
+          <li><i class="fa-regular fa-at" style= "margin-right: 10px"></i><%= current_user.email %></li>
         </ul>
       </div>
       <div class="col-md-6">
         <ul>
-          <li><%= current_user.address %></li>
-          <li><%= current_user.phone %></li>
-          <li><%= current_user.rib %></li>
+          <li><i class="fa-solid fa-house" style= "margin-right: 10px"></i><%= current_user.address %></li>
+          <li><i class="fa-solid fa-phone" style= "margin-right: 10px"></i><%= current_user.phone %></li>
+          <li><i class="fa-solid fa-money-check" style= "margin-right: 10px"></i><%= current_user.rib %></li>
         </ul>
       </div>
     </div>
