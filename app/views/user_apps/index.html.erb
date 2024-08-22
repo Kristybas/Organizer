@@ -1,3 +1,79 @@
-<h1>UserApps#index</h1>
-<p>Find me in app/views/user_apps/index.html.erb</p>
-<%= link_to 'Retour', root_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?w=600&auto=format&fit=cro[…]3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww);">
+
+    <p>L'administratif n'a jamais été aussi simple</p>
+
+  </div>
+
+<div class="coordonnees" >
+    <% if user_signed_in? %>
+        <div style="display: flex; align-items: center; margin-bottom: 25px;">
+            <i class="fa-solid fa-user" style="font-size: 20px; margin-right: 10px;"></i>
+            <h2 style="margin: 0;">Mes coordonnées actuels</h2>
+        </div>
+            <div class="row">
+      <%# <div class="col-md-6">
+      </div>
+      <div class="col-md-6"> %>
+       <ul>
+      <li style="display: flex; justify-content: space-between; margin-left: 15px;">
+        <div>
+          <p style="display: inline-block; ">Votre adresse : </p>
+          <span><%= current_user.address %></span>
+        </div>
+        <div>
+          <p style="display: inline-block; margin-right: 10px">Votre numéro de téléphone : </p>
+          <span><%= current_user.phone %></span>
+        </div>
+      </li>
+      <li style="display: flex; justify-content: space-between; margin-left: 15px;">
+        <div>
+          <p style="display: inline-block; margin-right: 10px;">Vos coordonnées bancaire : </p>
+          <span><%= current_user.rib %></span>
+        </div>
+        <div>
+          <p style="display: inline-block; margin-right: 10px;">Votre email : </p>
+          <span><%= current_user.email %></span>
+        </div>
+      </li>
+    </ul>
+      </div>
+    </div>
+    <h1>Toutes vos démarches</h1>
+    <hr class="thick-hr"s>
+
+  <div class="app-cards-container">
+    <% @apps.each do |app| %>
+      <div class="app-card" data-app-id="<%= app.id %>">
+        <div class="app-card-header">
+          <h3><%= app.name %></h3>
+          <p><%= app.short_description %></p>
+        </div>
+        <div class="app-card-details">
+          <p><strong>Description:</strong> <%= app.description %></p>
+          <p><strong>Date de création:</strong> <%= app.created_at.strftime('%d %B %Y') %></p>
+          <p><strong>Dernière mise à jour:</strong> <%= app.updated_at.strftime('%d %B %Y') %></p>
+          <%= link_to 'Voir les détails', app_path(app), class: 'btn btn-primary' %>
+        </div>
+      </div>
+    <% end %>
+</div>
+    <div class="boutton d-flex justify-content-center mt-3" id="buttons">
+              <div class="boutton d-flex justify-content-center" id = "je déménage">
+            <a href="/mes_demarches" class="btn btn-flex" style="background-color: #FFD18E; color: white;">
+            <i class="fa-solid fa-dolly" style="font-size: 30px;"></i>
+              Je démenage </a>
+              </div>
+            <div class="boutton d-flex justify-content-center" id = "je change de rib">
+            <a href="/mes_demarches" class="btn btn-flex" style="background-color: #FFD18E; color: white;">
+            <i class="fa-solid fa-comments-dollar" style="font-size: 30px;"></i>
+              Je change de rib </a>
+              </div>
+            <div class="boutton d-flex justify-content-center" id = "je change mes coordonnées">
+            <a href="/mes_demarches" class="btn btn-flex" style="background-color: #FFD18E; color: white;">
+            <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
+              Je change mes coordonnées </a>
+              </div>
+    </div>
+      <% end %>
+      <%= link_to 'Retour', root_path %>
+  </div>
