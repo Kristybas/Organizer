@@ -1,0 +1,11 @@
+<h2>Applications liées à des adresses différentes</h2>
+
+<% if @different_address_apps.any? %>
+  <ul>
+    <% @different_address_apps.each do |user_app| %>
+      <li><%= user_app.name %> - <%= user_app.address %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Aucune application avec une adresse différente.</p>
+<% end %>

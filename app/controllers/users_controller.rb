@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+
   # GET /users
   def index
-    @users = User.all
+    @user = current_user
+    @different_address_apps = @user.je_demenage
   end
 
   # GET /users/:id
@@ -13,6 +15,11 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+  end
+
+  def je_demenage
+    @user = current_user
+    @different_address_apps = @user.user_apps.where.not(address: @user.address)
   end
 
   # POST /users
