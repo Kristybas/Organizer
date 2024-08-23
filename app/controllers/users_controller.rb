@@ -22,6 +22,11 @@ class UsersController < ApplicationController
     @different_address_apps = @user.user_apps.where.not(address: @user.address)
   end
 
+  def rib
+    @user = current_user
+    @different_rib_apps = @user.user_apps.where.not(rib: @user.rib)
+  end
+
   # POST /users
   def create
     @user = User.new(user_params)
@@ -34,6 +39,7 @@ class UsersController < ApplicationController
 
   # GET /users/:id/edit
   def edit
+    @user = current_user
   end
 
   # PATCH/PUT /users/:id
@@ -55,11 +61,11 @@ class UsersController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_user
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :phone, :address, :photo, :password, :password_confirmation)
+    params.require(:user).permit(:email, :first_name, :rib, :last_name, :phone, :address, :photo, :password, :password_confirmation)
   end
 end
