@@ -1,0 +1,23 @@
+<% if @different_rib_apps.any? %>
+  <ul>
+    <% @different_rib_apps.each do |user_app| %>
+      <div class="app-card">
+    <div class="app-card-header">
+      <h3><%= user_app.name %></h3> <!-- Utilise `user_app` au lieu de `@user_app` -->
+      <p><%= user_app.app.name if user_app.app %></p> <!-- Vérifie que `user_app.app` n'est pas nil -->
+    </div>
+    <div class="app-card-details">
+      <p><strong>Téléphone :</strong> <%= user_app.phone %></p>
+      <p><strong>Adresse :</strong> <%= user_app.address %></p>
+      <p><strong>Email :</strong> <%= user_app.email %></p>
+      <p><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
+      <p><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
+      <p><strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %></p>
+      <p><strong>RIB :</strong> <%= user_app.rib %></p>
+    </div>
+  </div>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Tout les RIB sont identiques.</p>
+<% end %>
