@@ -1,8 +1,7 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?w=600&auto=format&fit=cro[…]3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?w=600&auto=format&fit=crop&q=80');">
+  <p>L'administratif n'a jamais été aussi simple</p>
+</div>
 
-    <p>L'administratif n'a jamais été aussi simple</p>
-
-  </div>
 
 <div class="coordonnees" >
     <% if user_signed_in? %>
@@ -50,12 +49,15 @@
               </div>
 
 
-              <div class="boutton d-flex justify-content-center" id = "je change de rib">
-              <%= link_to rib_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
-              <i class="fa-solid fa-comments-dollar" style="font-size: 30px;"></i>
-                Je change de rib </a>
-                <% end %>
-                </div>
+<div class="boutton d-flex justify-content-center mt-3" id="buttons">
+  <div class="boutton d-flex justify-content-center" id="je-demenage">
+    <%= link_to je_demenage_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
+      <i class="fa-solid fa-dolly" style="font-size: 30px;"></i>
+      Je déménage
+    <% end %>
+  </div>
+
+              
               <div class="boutton d-flex justify-content-center" id = "je change mes coordonnées">
               <%= link_to users_edit_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
               <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
@@ -72,25 +74,31 @@
     </div>
     <hr class="thick-hr"s>
 
-  <div class="app-cards-container">
-  <% @user_apps.each do |user_app| %>
-  <div class="app-card">
-    <div class="app-card-header">
-      <h3><%= user_app.name %></h3> <!-- Utilise `user_app` au lieu de `@user_app` -->
-      <p><%= user_app.app.name if user_app.app %></p> <!-- Vérifie que `user_app.app` n'est pas nil -->
-    </div>
-    <div class="app-card-details">
-      <p><strong>Téléphone :</strong> <%= user_app.phone %></p>
-      <p><strong>Adresse :</strong> <%= user_app.address %></p>
-      <p><strong>Email :</strong> <%= user_app.email %></p>
-      <p><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
-      <p><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
-      <p><strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %></p>
-      <p><strong>RIB :</strong> <%= user_app.rib %></p>
-    </div>
+  <div class="boutton d-flex justify-content-center" id="je-change-de-rib">
+    <%= link_to rib_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
+      <i class="fa-solid fa-comments-dollar" style="font-size: 30px;"></i>
+      Je change de RIB
+    <% end %>
   </div>
-<% end %>
+
+
+  <div class="boutton d-flex justify-content-center" id="je-change-mes-coordonnees">
+    <%= link_to users_edit_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
+      <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
+      Je change mes coordonnées
+    <% end %>
+  </div>
+
+  <div class="boutton d-flex justify-content-center" id="ajouter-une-demarche">
+    <%= link_to user_apps_new_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
+      <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
+      Ajouter une démarche
+    <% end %>
+  </div>
 </div>
-      <% end %>
-      <%= link_to 'Retour', root_path %>
-  </div>
+
+<%= render "cards" %>
+
+<div class="d-flex justify-content-center mt-3">
+  <%= link_to 'Retour', root_path, class: 'btn btn-primary' %>
+</div>

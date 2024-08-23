@@ -24,3 +24,30 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.card-body {
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+  background-color: #fff;
+
+}
+
+#userCard.expanded .card-body {
+  max-height: 1000px;
+  /* Une grande valeur pour permettre l'expansion */
+}
+
+#userCard .card-body {
+  max-height: 100px;
+  /* Hauteur initiale limitée pour le contenu minimal */
+}
+
+.container-all {
+  background-color: #FFD18E;
+  padding: 20px;
+  margin: 10px;
+  width: 1082px;
+  height: 539px;
+  flex-shrink: 0;
+  justify-content: center;
+}
