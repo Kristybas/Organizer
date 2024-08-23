@@ -48,14 +48,16 @@
 </div>
               </div>
             <div class="boutton d-flex justify-content-center" id = "je change de rib">
-            <a href="/mes_demarches" class="btn btn-flex" style="background-color: #FFD18E; color: white;">
+            <%= link_to rib_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
             <i class="fa-solid fa-comments-dollar" style="font-size: 30px;"></i>
               Je change de rib </a>
+              <% end %>
               </div>
             <div class="boutton d-flex justify-content-center" id = "je change mes coordonnées">
-            <a href="/mes_demarches" class="btn btn-flex" style="background-color: #FFD18E; color: white;">
+            <%= link_to users_edit_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
             <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
               Je change mes coordonnées </a>
+              <% end %>
               </div>
               <div class="boutton d-flex justify-content-center" id = "ajouter une demarche">
              <a href="/new_demarche" class="btn" style="background-color: #FFD18E; color: white;">

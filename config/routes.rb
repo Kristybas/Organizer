@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :users
   get '/demenagement', to: 'users#je_demenage', as: 'je_demenage'
+  get '/chanement_rib', to: 'users#rib', as: 'rib'
 
   # Correction de cette ligne
   resources :user_apps
