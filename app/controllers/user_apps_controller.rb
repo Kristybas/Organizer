@@ -42,9 +42,11 @@ class UserAppsController < ApplicationController
 
   # DELETE /user_apps/:id
   def destroy
+    @user_app = current_user.user_apps.find(params[:id])
     @user_app.destroy
-    redirect_to user_apps_url, notice: 'UserApp was successfully destroyed.'
+    redirect_to mes_demarches_path, status: :see_other
   end
+
 
   private
 
