@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-# ENERGIES<<<<<<< seed-v2
+# ENERGIES
 
 
 App.destroy_all
@@ -107,7 +107,7 @@ caf.save!
 
  laposte.save!
 
- #Assurances et Mutelles
+ # Assurances et Mutelles
 
  p "creating generali app"
  generali = App.new
@@ -154,7 +154,7 @@ allianz.url_redirections = {
   allianz.save!
 
 
-#Banques
+# BANQUES
 
  p "creating Crédit Agricole app"
  credit_agricole = App.new
@@ -199,7 +199,7 @@ addresse:"https://particuliers.sg.fr/nos-conseils/comptes-et-cartes/demenage-cha
 
 societe_generale.save!
 
- #Télecommunications
+ # Telecommunication
 
  p "creating SFR app"
  sfr = App.new
@@ -252,3 +252,46 @@ societe_generale.save!
    rib: "https://communaute.sosh.fr/t5/Ma-facture-mon-paiement-Mon/Changement-de-compte-bancaire-pour-pr%C3%A9l%C3%A8vements/td-p/2357610"
   }
    sosh.save!
+
+   # DIVERTISSEMENTS
+
+   p "creating Disney app"
+   disney = App.new
+   disney.nom = "Disney"
+   disney.url_redirections = {
+    addresse: "https://www.disneyplus.com/identity/login/enter-email?pinned=true"
+
+   }
+    disney.save!
+
+    p "creating Amazon app"
+    amazon = App.new
+    amazon.nom = "Amazon"
+    amazon.url_redirections = {
+     addresse: "https://www.amazon.fr/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.fr%2Fcompte%2Fs%3Fk%3Dvotre%2Bcompte%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=frflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+
+    }
+     amazon.save!
+
+
+     p "creating Spotify app"
+    spotify = App.new
+    spotify.nom = "Spotify"
+    spotify.url_redirections = {
+    addresse: "https://accounts.spotify.com/fr/login" ,
+    rib: "https://support.spotify.com/fr/article/update-payment-details/"
+
+   }
+    spotify.save!
+
+
+
+     p "creating Netflix app"
+    netflix = App.new
+    netflix.nom = "Netflix"
+    netflix.url_redirections = {
+    addresse: "https://www.netflix.com/login" ,
+    rib: "https://help.netflix.com/fr/node/244"
+
+   }
+    netflix.save!
