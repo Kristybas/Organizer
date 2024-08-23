@@ -39,6 +39,7 @@
       </div>
     </div>
     <h1>Toutes vos démarches</h1>
+    <hr class="thick-hr"s>
     <div class="boutton d-flex justify-content-center mt-3" id="buttons">
     <div class="boutton d-flex justify-content-center" id="je-demenage">
     <%= link_to je_demenage_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
@@ -67,27 +68,37 @@
 
               </div>
     </div>
-    <hr class="thick-hr"s>
 
-  <div class="app-cards-container">
-  <% @user_apps.each do |user_app| %>
-  <div class="app-card">
-    <div class="app-card-header">
-      <h3><%= user_app.name %></h3> <!-- Utilise `user_app` au lieu de `@user_app` -->
-      <p><%= user_app.app.name if user_app.app %></p> <!-- Vérifie que `user_app.app` n'est pas nil -->
-    </div>
-    <div class="app-card-details">
-      <p><strong>Téléphone :</strong> <%= user_app.phone %></p>
-      <p><strong>Adresse :</strong> <%= user_app.address %></p>
-      <p><strong>Email :</strong> <%= user_app.email %></p>
-      <p><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
-      <p><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
-      <p><strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %></p>
-      <p><strong>RIB :</strong> <%= user_app.rib %></p>
-    </div>
-  </div>
-<% end %>
-</div>
-      <% end %>
+      <div class="app-cards-container">
+        <% @user_apps.each do |user_app| %>
+          <div class="app-card">
+            <div class="app-card-header">
+              <h3><% user_app.name %></h3> <!-- Utilise `user_app` au lieu de `@user_app` -->
+              <p><% user_app.app.name if user_app.app %></p> <!-- Vérifie que `user_app.app` n'est pas nil -->
+            </div>
+            <div class="card mb-3" id="userCard" style="cursor: pointer; width: 100%;">
+              <div class="card-header">
+                <h5 class="card-title"><%= user_app.app.name %></h5>
+              </div>
+              <div class="card-body" id="cardContent">
+                <!-- Contenu minimal affiché initialement -->
+                <p class="card-text"><strong>Adresse :</strong> <%= user_app.address %></p>
+                <p class="card-text"><strong>Email :</strong> <%= user_app.email %></p>
+              </div>
+              <div id="moreInfo" style="display: none;">
+                <!-- Contenu caché affiché après clic -->
+                <div class="card-body">
+                  <p class="card-text"><strong>Téléphone :</strong> <%= user_app.phone %></p>
+                  <p class="card-text"><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
+                  <p class="card-text"><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
+                  <p class="card-text"><strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %></p>
+                  <p class="card-text"><strong>RIB :</strong> <%= user_app.rib %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <% end %> <!-- Fin de la boucle each -->
       <%= link_to 'Retour', root_path %>
   </div>
