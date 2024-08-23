@@ -21,14 +21,14 @@
           <span><%= current_user.address %></span>
         </div>
         <div>
-          <p style="display: inline-block; margin-right: 10px">Votre numéro de téléphone : </p>
+          <p style="display: inline-block">Votre numéro de téléphone : +33 </p>
           <span><%= current_user.phone %></span>
         </div>
       </li>
       <li style="display: flex; justify-content: space-between; margin-left: 15px;">
         <div>
           <p style="display: inline-block; margin-right: 10px;">Vos coordonnées bancaire : </p>
-          <span><%= current_user.rib %></span>
+          <span><%= current_user.encrypt_rib %></span>
         </div>
         <div>
           <p style="display: inline-block; margin-right: 10px;">Votre email : </p>
@@ -39,7 +39,8 @@
       </div>
     </div>
     <h1>Toutes vos démarches</h1>
-    <div class="boutton d-flex justify-content-center mt-3" id="buttons">
+    <div class="d-flex w-100 justify-content-between align-items-center">
+    <div class="boutton d-flex justify-content-center" id="buttons">
     <div class="boutton d-flex justify-content-center" id="je-demenage">
     <%= link_to je_demenage_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
     <i class="fa-solid fa-dolly" style="font-size: 30px;"></i>
@@ -47,23 +48,25 @@
   <% end %>
 </div>
               </div>
-            <div class="boutton d-flex justify-content-center" id = "je change de rib">
-            <%= link_to rib_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
-            <i class="fa-solid fa-comments-dollar" style="font-size: 30px;"></i>
-              Je change de rib </a>
-              <% end %>
-              </div>
-            <div class="boutton d-flex justify-content-center" id = "je change mes coordonnées">
-            <%= link_to users_edit_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
-            <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
-              Je change mes coordonnées </a>
-              <% end %>
-              </div>
-              <div class="boutton d-flex justify-content-center" id = "ajouter une demarche">
-             <a href="/new_demarche" class="btn" style="background-color: #FFD18E; color: white;">
-            <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
-            ajouter une demarche</a>
 
+
+              <div class="boutton d-flex justify-content-center" id = "je change de rib">
+              <%= link_to rib_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
+              <i class="fa-solid fa-comments-dollar" style="font-size: 30px;"></i>
+                Je change de rib </a>
+                <% end %>
+                </div>
+              <div class="boutton d-flex justify-content-center" id = "je change mes coordonnées">
+              <%= link_to users_edit_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
+              <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
+                Je change mes coordonnées </a>
+                <% end %>
+                </div>
+                <div class="boutton d-flex justify-content-center" id = "ajouter une demarche">
+              <a href="/new_demarche" class="btn btn-flex" style="background-color: #FFD18E; color: white;">
+              <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
+              ajouter une demarche</a>
+            </div>
 
               </div>
     </div>
