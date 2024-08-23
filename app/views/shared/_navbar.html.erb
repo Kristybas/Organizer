@@ -13,8 +13,11 @@
     <!-- Liens d'authentification Devise à droite -->
     <div class="ml-auto">
       <% if user_signed_in? %>
-        <span>Bienvenue, <%= current_user.email %>!</span>
-        <%= link_to 'Déconnexion', destroy_user_session_path, data: {turbo_method: "delete"} , class: "btn btn-outline-danger ml-2" %>
+      <div style="display: flex; align-items: center;">
+        <i class="fa-regular fa-circle-user" style= "margin-right: 20px; font-size: 30px"></i>
+        <span style="margin-right: 50px">Bienvenue, <%= current_user.first_name %>!</span>
+        <%= link_to 'Déconnexion', destroy_user_session_path, data: {turbo_method: "delete"} , class: "btn btn-outline-dark ml-2" %>
+      </div>
       <% else %>
         <%= link_to 'S\'inscrire', new_user_registration_path, class: "btn btn-outline-primary ml-2" %>
         <%= link_to 'Connexion', new_user_session_path, class: "btn btn-outline-success ml-2" %>
