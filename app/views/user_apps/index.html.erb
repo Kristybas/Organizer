@@ -57,7 +57,7 @@
     <% end %>
   </div>
 
-              
+
               <div class="boutton d-flex justify-content-center" id = "je change mes coordonnées">
               <%= link_to users_edit_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
               <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
@@ -74,31 +74,11 @@
     </div>
     <hr class="thick-hr"s>
 
-  <div class="boutton d-flex justify-content-center" id="je-change-de-rib">
-    <%= link_to rib_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
-      <i class="fa-solid fa-comments-dollar" style="font-size: 30px;"></i>
-      Je change de RIB
-    <% end %>
-  </div>
 
-
-  <div class="boutton d-flex justify-content-center" id="je-change-mes-coordonnees">
-    <%= link_to users_edit_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
-      <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
-      Je change mes coordonnées
-    <% end %>
-  </div>
-
-  <div class="boutton d-flex justify-content-center" id="ajouter-une-demarche">
-    <%= link_to user_apps_new_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
-      <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
-      Ajouter une démarche
-    <% end %>
-  </div>
-</div>
 
 <%= render "cards" %>
 
 <div class="d-flex justify-content-center mt-3">
   <%= link_to 'Retour', root_path, class: 'btn btn-primary' %>
 </div>
+<% end %>
