@@ -3,7 +3,7 @@ class UserAppsController < ApplicationController
 
   # GET /user_apps
   def index
-    @user_apps = UserApp.all
+    @user_apps = UserApp.all # Charge toutes les user_apps
   end
 
   # GET /user_apps/:id
