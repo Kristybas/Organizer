@@ -1,4 +1,4 @@
-<div class= container-all>
+<div class= container-all data-controller="hello">
 <div class="app-cards-container">
         <% @user_apps.each do |user_app| %>
           <div class="app-card">
@@ -6,7 +6,7 @@
               <h3><% user_app.name %></h3> <!-- Utilise `user_app` au lieu de `@user_app` -->
               <p><% user_app.app.name if user_app.app %></p> <!-- Vérifie que `user_app.app` n'est pas nil -->
             </div>
-            <div class="card mb-3" id="userCard" style="cursor: pointer; width: 100%;">
+            <div class="card mb-3" id="userCard" style="cursor: pointer; width: 100%;" data-hello-target="userCard" data-action="click->hello#grow">
               <div class="card-header">
                 <h5 class="card-title"><%= user_app.app.name %></h5>
               </div>
@@ -16,7 +16,7 @@
                 <p class="card-text"><strong>Email :</strong> <%= user_app.email %></p>
         <%= link_to 'Supprimer', user_app_path(user_app),  data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'btn btn-danger' %>
               </div>
-              <div id="moreInfo" style="display: none;">
+              <div id="moreInfo" style="display: none;" data-hello-target="moreInfo">
                 <!-- Contenu caché affiché après clic -->
                 <div class="card-body">
                   <p class="card-text"><strong>Téléphone :</strong> <%= user_app.phone %></p>
