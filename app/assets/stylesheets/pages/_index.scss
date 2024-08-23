@@ -14,10 +14,15 @@
 .btn-flex {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+
 }
 
 .btn-flex i {
   margin-right: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .card-body {
@@ -35,4 +40,14 @@
 #userCard .card-body {
   max-height: 100px;
   /* Hauteur initiale limitée pour le contenu minimal */
+}
+
+.container-all {
+  background-color: #FFD18E;
+  padding: 20px;
+  margin: 10px;
+  width: 1082px;
+  height: 539px;
+  flex-shrink: 0;
+  justify-content: center;
 }
