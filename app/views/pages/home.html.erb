@@ -31,8 +31,8 @@
     </div>
     </div>
     <div class="boutton d-flex justify-content-end mt-3" id="buttons">
-            <a href="/mes_demarches" class="btn" style="background-color: #FFD18E; color: white;">Voir mes démarches</a>
-            <a href="/new_demarche" class="btn" style="background-color: #FFD18E; color: white;">ajouter une demarche</a>
+            <%= link_to 'Voir mes démarches', mes_demarches_path, class: 'btn', style: 'background-color: #FFD18E; color: white;' %>
+<%= link_to 'Ajouter une démarche', new_demarche_path, class: 'btn', style: 'background-color: #FFD18E; color: white;' %>
     </div>
 
       <% end %>

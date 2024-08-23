@@ -61,13 +61,15 @@
               <% end %>
               </div>
               <div class="boutton d-flex justify-content-center" id = "ajouter une demarche">
-             <a href="/new_demarche" class="btn" style="background-color: #FFD18E; color: white;">
+             <%= link_to user_apps_new_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
             <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
             ajouter une demarche</a>
+            <% end %>
 
 
               </div>
     </div>
+
 
       <div class="app-cards-container">
         <% @user_apps.each do |user_app| %>
@@ -98,7 +100,9 @@
             </div>
           </div>
         <% end %>
+        <%= link_to 'Supprimer', user_app_path(user_app),  data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'btn btn-danger' %>
       </div>
       <% end %> <!-- Fin de la boucle each -->
+
       <%= link_to 'Retour', root_path %>
   </div>
