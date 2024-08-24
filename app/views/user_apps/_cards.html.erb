@@ -1,7 +1,7 @@
 <div class= container-all data-controller="hello">
-<div class="app-cards-container">
+  <div class="app-cards-container">
         <% @user_apps.each do |user_app| %>
-          <div class="app-card">
+          <div class="app-card" data-action="click->hello#grow">
             <div class="app-card-header">
               <h3><% user_app.name %></h3> <!-- Utilise `user_app` au lieu de `@user_app` -->
               <p><% user_app.app.name if user_app.app %></p> <!-- Vérifie que `user_app.app` n'est pas nil -->
@@ -26,7 +26,6 @@
               </div>
               </div>
             </div>
-          </div>
         <% end %>
-      </div>
+  </div>
 </div>
