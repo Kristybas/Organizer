@@ -1,6 +1,4 @@
 
-
-
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?w=600&auto=format&fit=cro[…]3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3JnYW5pemF0aW9ufGVufDB8fDB8fHww);">
 
     <h3>L'administratif n'a jamais été aussi simple</h3>
@@ -10,7 +8,7 @@
   <div class="coordonnees" >
     <% if user_signed_in? %>
             <h2>Mes coordonnées actuels</h2>
-            <hr class="thick-hr"s>
+            <hr class="thick-hr">
             <div class="row">
       <div class="col-md-6">
         <ul>
@@ -32,7 +30,7 @@
     </div>
     <div class="boutton d-flex justify-content-end mt-3" id="buttons">
             <%= link_to 'Voir mes démarches', mes_demarches_path, class: 'btn', style: 'background-color: #FFD18E; color: white;' %>
-<%= link_to 'Ajouter une démarche', new_demarche_path, class: 'btn', style: 'background-color: #FFD18E; color: white;' %>
+    <%= link_to 'Ajouter une démarche', new_demarche_path, class: 'btn', style: 'background-color: #FFD18E; color: white;' %>
     </div>
 
       <% end %>
