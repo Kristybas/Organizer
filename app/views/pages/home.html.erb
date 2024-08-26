@@ -1,6 +1,5 @@
 
 <%= render 'pages/coordonnées' %>
- <%= render 'user_apps/cards' %>
     <div class="boutton d-flex justify-content-center" id="je-change-mes-coordonnees">
       <%= link_to users_edit_path, class: 'btn btn-flex', style: 'background-color: #FFD18E; color: white;' do %>
         <i class="fa-solid fa-address-card" style="font-size: 30px;"></i>
@@ -8,3 +7,4 @@
         <% end %>
 
   </div>
+ <%= render 'user_apps/cards' %>
