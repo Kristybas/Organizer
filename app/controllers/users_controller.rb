@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/:id
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+       redirect_to root_path, notice: 'User was successfully updated.'
     else
       render :edit
     end
