@@ -9,8 +9,13 @@
 
             <div class="card mb-3 little-card" id="userCard" style="cursor: pointer; width: 100%;">
             <div class="d-flex justify-content-between">
-                <h5 class="card-title"><%= user_app.app.name %></h5>
-              <%= link_to 'Supprimer', user_app_path(user_app),  data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'btn btn-outline-dark custom-btn' %>
+              <div id="logo">
+                <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.jpg", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.jpg") %> <!-- Vérifie que `user_app.app` n'est pas nil -->
+                <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.png", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.png") %> <!-- Vérifie que `user_app.app` n'est pas nil -->
+                <h4 class="card-title"><%= user_app.app.name %></h4>
+              <%= link_to user_app_path(user_app), data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'custom-icon-link' do %>
+                <i class="fa-solid fa-trash"></i>
+              <% end %>
                 </div >
                 <div class="d-flex justify-content-between">
                 <!-- Contenu minimal affiché initialement -->
@@ -23,10 +28,14 @@
 
                 <!-- Contenu caché affiché après clic -->
                   <p class="card-text"><strong>Téléphone :</strong> <%= user_app.phone %></p>
+                  <div >
                   <p class="card-text"><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
                   <p class="card-text"><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
+                  </div>
+                  <div class= "d-flex justify-content-between">
                   <p class="card-text"><strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %></p>
                   <p class="card-text"><strong>RIB :</strong> <%= user_app.rib %></p>
+                  </div>
               </div>
               </div>
             </div>
