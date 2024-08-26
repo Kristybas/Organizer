@@ -11,8 +11,8 @@
 # ENERGIES
 
 
+UserApp.destroy_all
 App.destroy_all
-
 p "creating EDF app"
 
 edf = App.new
@@ -20,7 +20,7 @@ edf.logo = "edf.png"
 
 edf.name = "EDF"
 edf.url_redirections = {
-  addresse: "https://particulier.edf.fr/fr/accueil/autres-pages/demenagement-edf.html?at_platform=google&at_medium=sl&at_campaign=GN_Demenagement_NUL_2024_Classique_NUL&at_creation=144877738243&at_term=changement%20adresse%20%C3%A9lectricit%C3%A9&at_extension=&at_loc=9055710&at_device=c&gad_source=1&gclid=CjwKCAjw5qC2BhB8EiwAvqa41qLMMotWj13xr3rf29N1vYPusxP4hoyo1Ny7oIPDNand0by1f99VTBoCTakQAvD_BwE&gclsrc=aw.ds" ,
+  address: "https://particulier.edf.fr/fr/accueil/autres-pages/demenagement-edf.html?at_platform=google&at_medium=sl&at_campaign=GN_Demenagement_NUL_2024_Classique_NUL&at_creation=144877738243&at_term=changement%20adresse%20%C3%A9lectricit%C3%A9&at_extension=&at_loc=9055710&at_device=c&gad_source=1&gclid=CjwKCAjw5qC2BhB8EiwAvqa41qLMMotWj13xr3rf29N1vYPusxP4hoyo1Ny7oIPDNand0by1f99VTBoCTakQAvD_BwE&gclsrc=aw.ds" ,
   rib: "https://www.edf.fr/entreprises/faq-entreprises/contrat/modifier-votre-contrat/comment-communiquer-un-nouveau-rib-pour-payer-vos-factures-edf-en-ligne"
 }
 
@@ -48,7 +48,7 @@ eni.logo = "eni.png"
 eni.name = "ENI"
 eni.url_redirections ={
 
-  addresse:"https://fr.eni.com/particuliers/demenager-eni" ,
+  address:"https://fr.eni.com/particuliers/demenager-eni" ,
   rib: "https://fr.eni.com/particuliers/faq/paiements"
 }
 
@@ -64,7 +64,7 @@ impot_gouv.logo = "impot.jpg"
 
 impot_gouv.name = "Impot_gouv"
 impot_gouv.url_redirections = {
- addresse: "https://www.impots.gouv.fr/particulier/questions/je-viens-de-demenager-quelles-demarches-dois-je-accomplir-aupres-de",
+ address: "https://www.impots.gouv.fr/particulier/questions/je-viens-de-demenager-quelles-demarches-dois-je-accomplir-aupres-de",
  rib: "https://www.impots.gouv.fr/particulier/questions/comment-modifier-mes-coordonnees-bancaires-mon-rib-pour-payer-mes-impots#:~:text=Pour%20effectuer%20cette%20modification%2C%20rendez,%C3%A0%20jour%20vos%20coordonn%C3%A9es%20bancaires%20%C2%BB"
 
 }
@@ -79,7 +79,7 @@ ameli.logo = "ameli.png"
 
 ameli.name = "Ameli"
 ameli.url_redirections = {
-  addresse: "https://www.ameli.fr/assure/adresses-et-contacts/un-changement-de-situation/declarer-un-changement-de-coordonnees/declarer-une-nouvelle-adresse-postale" ,
+  address: "https://www.ameli.fr/assure/adresses-et-contacts/un-changement-de-situation/declarer-un-changement-de-coordonnees/declarer-une-nouvelle-adresse-postale" ,
   rib:"https://www.ameli.fr/assure/adresses-et-contacts/un-changement-de-situation/declarer-un-changement-de-coordonnees/declarer-un-changement-de-compte-bancaire"
 }
 
