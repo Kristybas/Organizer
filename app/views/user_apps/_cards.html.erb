@@ -1,4 +1,3 @@
-
 <div class="container-all" data-controller="hello">
   <div class="app-cards-container">
     <% @user_apps.each do |user_app| %>
@@ -58,16 +57,20 @@
                 <% end %>
               </p>
             </div>
-                <div class= "redirect_links ">
+            <div class="redirect_links d-flex justify-content-end">
               <% if user_app.app.url_redirections.present? %>
                 <% if user_app.app.url_redirections["rib"].present? %>
-                   <%= link_to "cliquez ici pour aller sur le site", user_app.app.url_redirections["rib"], target: "_blank", class: 'btn btn-dark' %>
+                  <%= link_to user_app.app.url_redirections["rib"], target: "_blank", class: 'btn btn-dark ml-2' do %>
+                    <i class=" icon fa-solid fa-building-columns"></i> cliquez ici pour aller sur le site
+                  <% end %>
                 <% end %>
                 <% if user_app.app.url_redirections["address"].present? %>
-                   <%= link_to "cliquez ici pour aller sur le site", user_app.app.url_redirections["address"], target: "_blank", class: 'btn btn-dark' %>
+                  <%= link_to user_app.app.url_redirections["address"], target: "_blank", class: 'btn btn-dark ml-2' do %>
+                    <i class="icon fa-solid fa-house"></i> cliquez ici pour aller sur le site
+                  <% end %>
                 <% end %>
               <% end %>
-              </div>
+            </div>
           </div>
         </div>
       </div>
