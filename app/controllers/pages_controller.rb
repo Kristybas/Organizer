@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!
   def home
     @query = params[:query]
     @user_apps = current_user.user_apps
