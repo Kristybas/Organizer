@@ -13,9 +13,20 @@
                 <h3><%= user_app.app.name %></h3>
             </div>
 
+          <% if user_app.address != current_user.address || user_app.email != current_user.email %>
+              <div class="alert-icons">
+                <% if user_app.address != current_user.address %>
+                  <i class="fa-solid fa-circle-exclamation" title="adresse non à jour" id="warning"></i>
+                <% end %>
+                <% if user_app.email != current_user.email %>
+                  <i class="fa-solid fa-circle-exclamation" title="email non à jour" id="warning"></i>
+                <% end %>
               <%= link_to user_app_path(user_app), data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'custom-icon-link' do %>
                 <i class="delete fa-solid fa-trash"></i>
               <% end %>
+
+              </div>
+            <% end %>
           </div>
             <div class="card little-card" id="userCard" style="cursor: pointer; width: 100%;">
           <div id="moreInfo" style="display: none;">
