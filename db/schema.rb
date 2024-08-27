@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_27_072644) do
     t.datetime "remember_created_at"
     t.string "first_name"
     t.string "last_name"
-    t.integer "phone"
+    t.string "phone"
     t.string "address"
     t.integer "status"
     t.string "photo"
