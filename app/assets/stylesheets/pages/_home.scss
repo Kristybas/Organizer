@@ -1,6 +1,5 @@
 // Specific CSS for your home-page
 
-
 body {
   width: 100%;
   background-color: #FFF;
@@ -46,6 +45,30 @@ body {
   }
 }
 
+.search-bar input[type="text"] {
+  width: 850px;
+  height: 40px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-left: 150px;
+  margin-bottom: 20px;
+}
+
+
+.search-bar .form-control {
+  height: 40px;
+  /* Ajustez la hauteur selon vos besoins */
+  border-radius: 20px 0 0 20px;
+  /* Arrondir les bords gauche */
+}
+
+.search-bar .btn {
+  height: 40px;
+  /* Ajustez la hauteur selon vos besoins */
+}
+
 #titre {
   text-align: center;
 
@@ -80,7 +103,6 @@ body {
   justify-content: flex-end;
   margin-right: 20px;
 
-
   button {
     margin-left: 10px;
     border-radius: 10px;
@@ -90,11 +112,6 @@ body {
 a {
   margin-right: 20px;
   color: #0a0a0a;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 }
 
 .coordonnees {
@@ -126,4 +143,9 @@ h3 {
   display: flex;
   margin-right: 40px;
   justify-content: flex-end;
+}
+
+hr {
+  width: 1200px;
+  margin-left: 20px;
 }
