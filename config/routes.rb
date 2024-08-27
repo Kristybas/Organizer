@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   get 'user_apps/edit'
 
   devise_for :users
+  get "/my_profile/edit", to: "users#edit", as: "edit_my_profile"
+  patch "/my_profile/edit", to: "users#update", as: "update_my_profile"
+  resources :user_apps
+
   root to: "pages#home"
   get 'mes_demarches', to: 'user_apps#index'
   get 'new_demarche', to: 'user_apps#new'

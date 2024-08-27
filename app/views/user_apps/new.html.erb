@@ -1,22 +1,67 @@
 <%= render 'pages/coordonnées' %>
+  <h1 id="titre">Ajout d'une démarche</h1>
 <div class="formulaire">
-<h1 id="titre">Ajout d'une demarche</h1>
 
+  <%= simple_form_for @user_app do |f| %>
+    <%= f.input :app_id, collection: App.all, label: 'Application' %>
+    <div class="form-group">
+      <label>Nom</label>
+      <% if current_user.first_name.present? %>
+        <span class="info"><%= current_user.first_name %></span>
+      <% else %>
+        <%= f.input :name, placeholder: "Nom", label: false %>
+      <% end %>
+    </div>
 
+    <div class="form-group">
+      <label>Téléphone</label>
+      <% if current_user.phone.present? %>
+        <span class="info"><%= current_user.phone %></span>
+      <% else %>
+        <%= f.input :phone, placeholder: "Téléphone", label: false %>
+      <% end %>
+    </div>
 
+    <div class="form-group">
+      <label>Adresse</label>
+      <% if current_user.address.present? %>
+        <span class="info"><%= current_user.address %></span>
+      <% else %>
+        <%= f.input :address, placeholder: "Adresse", label: false %>
+      <% end %>
+    </div>
 
-<%= simple_form_for @user_app do |f| %>
-  <%= f.input :app_id, collection: App.all ,label: false  %>
-  <%= f.input :name, placeholder: "Nom",label: false %>
-  <%= f.input :phone, placeholder: "Téléphone",label: false %>
-  <%= f.input :address, placeholder: "Adresse",label: false %>
-  <%= f.input :email, placeholder: "Email",label: false %>
-  <%= f.input :date_prelevement, placeholder: "Date de prélèvement",label: false %>
-  <%= f.input :date_renouvellement, placeholder: "Date de renouvellement",label: false %>
-  <%= f.input :montant, placeholder: "Montant",label: false %>
-  <%= f.input :rib, placeholder: "RIB",label: false %>
-  <%= f.button :submit %>
-<% end %>
+    <div class="form-group">
+      <label>Email</label>
+      <% if current_user.email.present? %>
+        <span class="info"><%= current_user.email %></span>
+      <% else %>
+        <%= f.input :email, placeholder: "Email", label: false %>
+      <% end %>
+    </div>
+    <div class="form-group">
+      <label>RIB</label>
+      <% if current_user.rib.present? %>
+        <span class="info"><%= current_user.rib %></span>
+      <% else %>
+        <%= f.input :rib, placeholder: "RIB", label: false %>
+      <% end %>
+    </div>
+    <div class="d-flex justify-content-between" id="center">
+  <div id="date">
+    <%= f.input :date_prelevement, placeholder: "Date de prélèvement", label: 'Date de prélèvement', as: :date, html5: true %>
+    <%= f.input :date_renouvellement, placeholder: "Date de renouvellement", label: 'Date de renouvellement', as: :date, html5: true %>
+  </div>
+</div>
+    <div id="montant">
+      <%= f.input :montant, placeholder: "Montant", label: false %>
+    </div>
+
+    <div id=enregister>
+      <%= f.button :submit, value: 'Enregistrer', class: 'submit-button' %>
+    </div>
+  <% end %>
+
 </div>
 
 <%= link_to 'Retour', root_path %>

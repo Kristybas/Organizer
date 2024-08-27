@@ -13,6 +13,23 @@
 
 UserApp.destroy_all
 App.destroy_all
+# Effacer les utilisateurs existants
+User.destroy_all
+
+# Créer des utilisateurs
+users = [
+  { first_name: "John", last_name: "Doe", email: "john.doe@example.com", phone: "0123456789", address: "123 Main Street, Paris", rib: "FR7630006000011234567890189", password: "password" },
+  { first_name: "Jane", last_name: "Smith", email: "jane.smith@example.com", phone: "0987654321", address: "456 Elm Street, Lyon", rib: "FR7630006000019876543210987", password: "password" },
+  { first_name: "Alice", last_name: "Johnson", email: "alice.johnson@example.com", phone: "0111222333", address: "789 Oak Avenue, Marseille", rib: "FR7630006000011122334455667", password: "password" },
+  { first_name: "Bob", last_name: "Brown", email: "bob.brown@example.com", phone: "0333444555", address: "101 Pine Road, Nice", rib: "FR7630006000013334445556667", password: "password" }
+]
+
+# Insérer les utilisateurs dans la base de données
+users.each do |user_data|
+  User.create!(user_data)
+end
+
+puts "Created #{User.count} users."
 p "creating EDF app"
 
 edf = App.new
@@ -374,3 +391,20 @@ netflix.url_redirections = {
 
 }
 netflix.save!
+
+User.all.each do |user|
+  App.all.shuffle.sample(rand(3..5)).each do |app|
+    UserApp.create!(
+      user: user,
+      app: app,
+      phone: user.phone,
+      address: user.address,
+      email: user.email,
+      rib: user.rib,
+      date_prelevement: Date.today,
+      date_renouvellement: Date.today + 1.year,
+      montant: rand(20..100),
+      name: "#{user.first_name}'s #{app.name}"
+    )
+  end
+end
