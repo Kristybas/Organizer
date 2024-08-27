@@ -3,7 +3,6 @@
 
 body {
   width: 100%;
-  justify-content: center;
   background-color: #FFF;
 }
 
@@ -121,4 +120,10 @@ h3 {
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
+}
+
+#ajouter-une-demarche {
+  display: flex;
+  margin-right: 40px;
+  justify-content: flex-end;
 }

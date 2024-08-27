@@ -9,4 +9,12 @@
   <% end %>
 </div>
 
- <%= render 'user_apps/cards' %>
+<div class="card-container">
+  <div id="ajouter-une-demarche">
+    <%= link_to new_demarche_path, class: "btn btn-outline-dark ml-2" do %>
+      <i class="fa-solid fa-file-circle-plus"></i>
+      Ajouter une démarche
+    <% end %>
+  </div>
+    <%= render 'user_apps/cards' %>
+</div>

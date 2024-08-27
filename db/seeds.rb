@@ -124,7 +124,7 @@ laposte.logo = "laposte.jpg"
 
 laposte.name = "laPoste"
 laposte.url_redirections = {
-  addresse: "https://www.laposte.fr/demenager/comment-faire-changement-adresse"
+  address: "https://www.laposte.fr/demenager/comment-faire-changement-adresse"
 }
 
 laposte.save!
@@ -138,7 +138,7 @@ generali.logo = "generali.jpg"
 
 generali.name = "Generali"
 generali.url_redirections = {
-addresse: "https://www.generali.fr/agence/lecomte/aquitaine/assurance/je-demenage#:~:text=Avec%20Generali%2C%20profitez%20d'un%20d%C3%A9m%C3%A9nagement%20sans%20stress&text=Avec%20Generali%2C%20tout%20est%20simplifi%C3%A9,adapt%C3%A9%20%C3%A0%20votre%20nouvelle%20habitation" ,
+addrese: "https://www.generali.fr/agence/lecomte/aquitaine/assurance/je-demenage#:~:text=Avec%20Generali%2C%20profitez%20d'un%20d%C3%A9m%C3%A9nagement%20sans%20stress&text=Avec%20Generali%2C%20tout%20est%20simplifi%C3%A9,adapt%C3%A9%20%C3%A0%20votre%20nouvelle%20habitation" ,
 rib: "https://www.generali.fr/aide/user-question/modifie-mon-rib#:~:text=Je%20veux%20changer%20les%20coordonn%C3%A9es,choisir%20%3A%20Changement%20de%20coordonn%C3%A9es%20bancaires."
 }
 
@@ -152,7 +152,7 @@ macsf.logo = "macsf.jpg"
 
 macsf.name = "MACSF"
 macsf.url_redirections = {
-  addresse: "https://www.macsf.fr/vie-pratique/habitation/je-demenage-aide-au-demenagement" ,
+  address: "https://www.macsf.fr/vie-pratique/habitation/je-demenage-aide-au-demenagement" ,
   rib: "https://www.macsf.fr/aide-et-contact/espace-personnel/questions-frequentes-espace-personnel#:~:text=Vous%20pouvez%20changer%20le%20compte,cliquez%20sur%20Changer%20de%20compte."
  }
 
@@ -166,7 +166,7 @@ swisslife.logo = "swisslife.png"
 
 swisslife.name = "Swisslife"
 swisslife.url_redirections = {
-   addresse: "https://www.swisslife-select.ch/fr/decidez-vous-meme/evenements-delavie/umzug.html" ,
+   address: "https://www.swisslife-select.ch/fr/decidez-vous-meme/evenements-delavie/umzug.html" ,
    rib: "https://myswisslife.fr/connection/login"
 }
 
@@ -182,7 +182,7 @@ allianz.logo = "allianz.jpg"
 
 allianz.name = "Allianz"
 allianz.url_redirections = {
-  addresse: "https://www.allianz.fr/assurance-particulier/projet-vie/preparer-son-demenagement.html" ,
+  address: "https://www.allianz.fr/assurance-particulier/projet-vie/preparer-son-demenagement.html" ,
   rib: "https://www.allianz.fr/assurance-particulier/service-client/mon-allianz-mobile.html"
 }
 
@@ -199,7 +199,7 @@ credit_agricole.logo = "creditagricole.jpg"
 
 credit_agricole.name = "Credit_Agricole"
 credit_agricole.url_redirections = {
- addresse: "https://www.credit-agricole.fr/particulier/conseils/magazine/tout-un-mag/demenagement-les-10-reflexes-du-credit-agricole.html#:~:text=PR%C3%89VENIR%20SON%20BANQUIER&text=Ou%20vous%20%C3%AAtes%20d%C3%A9j%C3%A0%20client,ou%20de%20suivre%20ces%20d%C3%A9marches" ,
+ address: "https://www.credit-agricole.fr/particulier/conseils/magazine/tout-un-mag/demenagement-les-10-reflexes-du-credit-agricole.html#:~:text=PR%C3%89VENIR%20SON%20BANQUIER&text=Ou%20vous%20%C3%AAtes%20d%C3%A9j%C3%A0%20client,ou%20de%20suivre%20ces%20d%C3%A9marches" ,
  rib: "https://www.credit-agricole.fr/particulier/conseils/magazine/tout-un-mag/comment-changer-de-banque-avec-la-loi-macron-c-est-facile.html"
  }
 
@@ -214,7 +214,7 @@ bnp.logo = "bnp.jpg"
 
 bnp.name = "BNP"
 bnp.url_redirections = {
- addresse: "https://mabanque.bnpparibas/fr/gerer/comptes-et-formules/gerer-ses-comptes/demenager-formalites" ,
+ address: "https://mabanque.bnpparibas/fr/gerer/comptes-et-formules/gerer-ses-comptes/demenager-formalites" ,
  rib: "https://mabanque.bnpparibas/fr/gerer/services-lies-compte/options-et-services/justificatifs-informations-personnelles"
  }
 
@@ -228,7 +228,7 @@ hellobank.logo = "hellobank.jpg"
 
 hellobank.name = "HelloBank"
 hellobank.url_redirections = {
- addresse:"https://www.hellobank.fr/faq/comment-modifier-mon-adresse-postale.html#:~:text=Reponse%3A,puis%20sur%20%22Mon%20adresse%22" ,
+ address:"https://www.hellobank.fr/faq/comment-modifier-mon-adresse-postale.html#:~:text=Reponse%3A,puis%20sur%20%22Mon%20adresse%22" ,
  rib: "https://www.hellobank.fr/lexique/changement-de-coordonnees-bancaires/#:~:text=Pour%20que%20le%20changement%20de,bancaire%20d%C3%A8s%20le%20mois%20suivant.&text=Les%20plus%20d'Hello%20bank!"
 }
 
