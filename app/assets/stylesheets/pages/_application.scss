@@ -1,0 +1,124 @@
+.formulaire {
+  box-shadow: 3px 3px 3px 3px #ffe9c7;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;}
+.user-info {
+  margin: 0;
+  padding: 0;
+}
+
+.edit-link {
+  display: block;
+  margin-top: 5px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.edit-field {
+  display: none;
+}
+
+.edit-field.active {
+  display: block;
+}
+#date {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+
+  border-radius: 5px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+ font-weight: bold;
+}
+
+.info {
+  margin-left: 10px;
+  color: #333; /* Couleur du texte, ajustez selon vos préférences */
+}
+
+input {
+  width: auto;
+  margin-left: 10px;
+}
+
+input[type="text"] {
+  width: 100%; /* Assurez-vous que les champs de saisie utilisent tout l'espace disponible */
+}
+
+#date .form-group {
+  padding: 10px;
+  margin: 0 10px;
+  flex: 1;
+}
+
+#date .form-group input {
+  width: 100%;
+}
+
+#center {
+  text-align: center;
+}
+#montant {
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+
+  border-radius: 5px;
+}
+
+#enregister {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formulaires {
+  width: 70%;
+  box-shadow: 3px 3px 3px 3px #ffe9c7;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;}
+  #mini-card {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    gap: 20px; /* Adjust space between columns */
+    align-items: flex-start; /* Align items at the top */
+  }
+
+  .edit-user {
+    flex: 1; /* Each edit-user column takes up equal space */
+  }
+
+  .photo-column {
+    flex: 0.5; /* The photo column takes up half the space of an edit-user column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  input[type="file"] {
+    display: block;
+    margin-top: 10px;
+  }

@@ -29,12 +29,14 @@ class UserAppsController < ApplicationController
 
   # GET /user_apps/:id/edit
   def edit
+    # @user_app est déjà défini grâce à la méthode set_user_app
   end
 
   # PATCH/PUT /user_apps/:id
   def update
+
     if @user_app.update(user_app_params)
-      redirect_to root_path, notice: 'UserApp was successfully updated.'
+      redirect_to @user_app, notice: 'UserApp was successfully updated.'
     else
       render :edit
     end
