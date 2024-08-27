@@ -1,3 +1,4 @@
+
 <%= render 'pages/coordonnées' %>
   <h1 id="titre">Ajout d'une démarche</h1>
 <div class="formulaire">
@@ -20,6 +21,7 @@
       <% else %>
         <%= f.input :phone, placeholder: "Téléphone", label: false %>
       <% end %>
+
     </div>
 
     <div class="form-group">
@@ -60,8 +62,20 @@
     <div id=enregister>
       <%= f.button :submit, value: 'Enregistrer', class: 'submit-button' %>
     </div>
-  <% end %>
 
+
+
+   <div class="d-flex justify-content-between">
+   <div class="start-date">
+       <%= f.input :date_prelevement, placeholder: "Date de prélèvement", label: false, as: :date, html5: true %>
+   </div>
+
+  <div class="end-date"><%= f.input :date_renouvellement, placeholder: "Date de renouvellement",label: false, as: :date, html5: true %></div>
 </div>
-
+  <div class="montant"><%= f.input :montant, placeholder: "Montant",label: false %></div>
+  </div>
+<div class="d-flex justify-content-center align-items-center">
+  <%= f.button :submit, "Ajouter", class: "btn btn-primary" %>
+</div>
+<% end %>
 <%= link_to 'Retour', root_path %>
