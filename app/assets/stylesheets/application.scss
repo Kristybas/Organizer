@@ -14,7 +14,7 @@
 .custom-btn {
   width: 150px;
   /* Largeur du bouton */
-  height: 35px;
+  height: auto;
   /* Hauteur du bouton */
   padding: 5px 20px;
   margin-right: 10px;
@@ -24,17 +24,16 @@
 .container-all {
   background-color: #FFD18E;
   padding: 10px;
-  margin: 60px;
+  // margin: 60px;
   border-radius: 10px;
   height: auto;
-  width: 1180px;
+  width: 1200px;
 
 }
 
 .app-cards-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
 
 }
 
@@ -42,27 +41,16 @@
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-
 }
 
-.dimension {
-  height: 60px;
-}
+
 
 .app-card-header {
+  margin: 10px;
 
-  padding: 10px;
-}
-
-.app-info-container {
-  display: flex;
-  align-items: center;
-
+  h3 {
+    margin-left: 10px;
+  }
 }
 
 .app-info {
@@ -76,8 +64,7 @@
 }
 
 .card-text {
-  padding: 10px;
-
+  margin-left: 10px;
 }
 
 h4 {
@@ -87,14 +74,18 @@ h4 {
 
 #image {
   width: 50px;
-  height: 50px;
+  height: auto;
   border-radius: 10px;
   overflow: auto;
 }
 
 
-.delete {
-  color: #000000;
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  cursor: pointer;
 }
 
 .warning-container {
@@ -110,7 +101,8 @@ h4 {
 }
 
 .redirect_links {
-  margin-left: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .icon {

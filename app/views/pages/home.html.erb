@@ -1,14 +1,12 @@
-
 <%= render 'pages/coordonnées' %>
-<div class="search-bar">
-  <%= form_with url: root_path, method: :get, local: true do |form| %>
-    <%= form.label :query, "Recherche :" %>
-    <%= form.text_field :query, placeholder: "Entrez votre recherche" %>
-
-    <%= form.submit "Rechercher", class: "btn btn-primary" %>
+<div class="search-bar d-flex align-items-center">
+  <%= form_with url: root_path, method: :get, local: true, class: "d-flex w-100" do |form| %>
+    <%= form.text_field :query, placeholder: "Entrez votre recherche", class: "form-control me-2" %>
+    <%= form.submit "Rechercher", class: " recherche btn btn-dark" %>
   <% end %>
 </div>
-
+<hr>
+<h3>Vos démarches</h3>
 <div class="card-container">
   <div id="ajouter-une-demarche">
     <%= link_to new_demarche_path, class: "btn btn-outline-dark ml-2" do %>
@@ -16,5 +14,5 @@
       Ajouter une démarche
     <% end %>
   </div>
-    <%= render 'user_apps/cards' %>
+  <%= render 'user_apps/cards' %>
 </div>
