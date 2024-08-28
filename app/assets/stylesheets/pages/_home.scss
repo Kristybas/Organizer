@@ -130,6 +130,7 @@ a {
   justify-content: center;
   margin-top: 20px;
 }
+
 #appname {
   justify-content: center;
   align-items: center;
@@ -177,17 +178,24 @@ h3 {
 hr {
   width: 1200px;
   margin-left: 20px;
+
+}
+
+.thick-hr {
+  color: #FFD18E;
 }
 
 .form-group {
-  > label {
+  >label {
     letter-spacing: 1px;
   }
 
 }
+
 #modifform {
   display: flex;
-  justify-content: center; /* Centre le contenu horizontalement */
+  justify-content: center;
+  /* Centre le contenu horizontalement */
 }
 
 
