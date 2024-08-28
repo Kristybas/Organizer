@@ -11,9 +11,7 @@
                 <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.png", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.png") %>
               </div>
                 <h3><%= user_app.app.name %></h3>
-            </div>
-
-          <% if user_app.address != current_user.address || user_app.email != current_user.email %>
+          <% if user_app.address != current_user.address || user_app.email != current_user.email || user_app.phone != current_user.phone || user_app.rib != current_user.rib %>
               <div class="alert-icons">
                 <% if user_app.address != current_user.address %>
                   <i class="fa-solid fa-circle-exclamation" title="adresse non à jour" id="warning"></i>
@@ -21,13 +19,21 @@
                 <% if user_app.email != current_user.email %>
                   <i class="fa-solid fa-circle-exclamation" title="email non à jour" id="warning"></i>
                 <% end %>
+                <% if user_app.phone != current_user.phone %>
+                  <i class="fa-solid fa-circle-exclamation" title="numéro de téléphone non à jour" id="warning"></i>
+                <% end %>
+                <% if user_app.rib != current_user.rib %>
+                  <i class="fa-solid fa-circle-exclamation" title="RIB non à jour" id="warning"></i>
+                <% end %>
+              </div>
+          <% end %>
               <%= link_to user_app_path(user_app), data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'custom-icon-link' do %>
                 <i class="delete fa-solid fa-trash"></i>
               <% end %>
-
               </div>
-            <% end %>
           </div>
+            </div>
+
             <div class="card little-card" id="userCard" style="cursor: pointer; width: 100%;">
           <div id="moreInfo" style="display: none;">
             <p class="card-text ">
