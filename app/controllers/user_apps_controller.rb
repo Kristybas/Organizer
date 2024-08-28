@@ -46,7 +46,7 @@ class UserAppsController < ApplicationController
   def destroy
     @user_app = current_user.user_apps.find(params[:id])
     @user_app.destroy
-    redirect_to mes_demarches_path, status: :see_other
+    redirect_to root_path, status: :see_other
   end
 
 
