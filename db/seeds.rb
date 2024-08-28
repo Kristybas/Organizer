@@ -79,7 +79,7 @@ p "creating Impot app"
 impot_gouv = App.new
 impot_gouv.logo = "impot.jpg"
 
-impot_gouv.name = "Impot_gouv"
+impot_gouv.name = "Impot gouv"
 impot_gouv.url_redirections = {
  address: "https://www.impots.gouv.fr/particulier/questions/je-viens-de-demenager-quelles-demarches-dois-je-accomplir-aupres-de",
  rib: "https://www.impots.gouv.fr/particulier/questions/comment-modifier-mes-coordonnees-bancaires-mon-rib-pour-payer-mes-impots#:~:text=Pour%20effectuer%20cette%20modification%2C%20rendez,%C3%A0%20jour%20vos%20coordonn%C3%A9es%20bancaires%20%C2%BB"

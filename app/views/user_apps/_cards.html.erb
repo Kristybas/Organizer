@@ -24,6 +24,7 @@
                 <i class="fa-solid fa-exclamation-triangle text-warning ms-2" title="Email non à jour"></i>
               <% end %>
             </p>
+
           <%= link_to user_app_path(user_app), data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'custom-icon-link' do %>
             <i class="delete fa-solid fa-trash"></i>
           <% end %>
