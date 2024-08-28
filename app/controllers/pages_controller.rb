@@ -1,11 +1,10 @@
 class PagesController < ApplicationController
   before_action :authenticate_user!
   def home
-    @user = current_user
     @query = params[:query]
     @user_apps = current_user.user_apps
-    @user_apps = @user_apps.joins(:app).where("apps.name ILIKE ? or user_apps.rib NOT ILIKE ? or user_apps.phone NOT ILIKE ? or user_apps.address NOT ILIKE ? or user_apps.email NOT ILIKE ? ", "%#{@query}%","%#{@query}%","%#{@query}%","%#{@query}%","%#{@query}%") if @query.present?
-
+    @user_apps = @user_apps.joins(:app).where("apps.name ILIKE ?", "%#{@query}%") if @query.present?
+    @user_apps = @user_apps.where.not("user_apps.rib ILIKE ? or user_apps.phone ILIKE ? or user_apps.address ILIKE ? or user_apps.email ILIKE ? ", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%") if @query.present?
   end
 
 

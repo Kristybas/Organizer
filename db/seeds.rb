@@ -407,4 +407,5 @@ User.all.each do |user|
       name: "#{user.first_name}'s #{app.name}"
     )
   end
+  p "tout est ok"
 end
