@@ -1,7 +1,7 @@
 .container-all {
 
   margin: auto;
-  background-color: #FFD18E;
+  box-shadow: 0px 0px 3px 3px #ffe9c7;
   padding: 10px;
   border-radius: 10px;
   width: 100%;
@@ -25,16 +25,20 @@
   justify-content: center;
   /* Centre les cartes */
   width: 100%;
+  margin-top: 20px;
 }
 
 .app-card {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 10px;
   /* Ajuste pour trois cartes par ligne, en comptant les marges */
   box-sizing: border-box;
+}
+
+.info-card-text {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .warning-icon {
@@ -116,12 +120,7 @@ strong {
   margin-right: 5px;
 }
 
-.alert-icons {
-  width: 100%;
+.alert-icon {
   display: flex;
-  align-items: center;
-}
-
-#warning {
-  margin: 0;
+  justify-items: center;
 }

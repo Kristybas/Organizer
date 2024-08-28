@@ -170,6 +170,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
+  margin-left: 20px;
 }
 
 #ajouter-une-demarche {
@@ -186,6 +187,8 @@ hr {
 
 .thick-hr {
   color: #FFD18E;
+  height: 20px;
+  width: 250px;
 }
 
 .form-group {
