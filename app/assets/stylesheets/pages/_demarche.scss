@@ -10,3 +10,43 @@
     border: 4px solid #FFD18E;
   }
 }
+
+#modifform {
+  input:focus {
+    border: 4px solid #FFD18E;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    font-weight: bold;
+    // margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  #modifform {
+    display: flex;
+    align-items: center; // Aligne verticalement les éléments au centre
+
+    .info {
+      margin-right: 8px; // Espace entre le texte et l'icône
+      font-size: 1rem; // Ajuste la taille du texte si nécessaire
+    }
+
+    :first-child {
+      margin-bottom: 0 !important;
+    }
+
+    .eye-icon {
+      font-size: 1.2em; // Ajuste la taille de l'icône
+      cursor: pointer; // Change le curseur en pointeur pour indiquer que c'est cliquable
+      margin-left: 8px; // Espace entre l'icône et le texte
+    }
+
+    input.d-none {
+      display: none; // Assure que l'input RIB est caché
+    }
+  }
+}
