@@ -1,42 +1,26 @@
-
 <div class="container-all" data-controller="hello">
-  <div class="row">
+  <div class="app-cards-container">
     <% @user_apps.each do |user_app| %>
-      <div class="col-md-6 mb-4"> <!-- Utilisez col-md-6 pour deux cartes par ligne -->
-        <div class="app-card card" data-action="click->hello#grow">
-          <div class="app-card-header d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center app-info-container">
-              <div id="image">
-                <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.jpg", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.jpg") %>
-                <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.png", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.png") %>
-              </div>
-                <h3><%= user_app.app.name %></h3>
-          <% if user_app.address != current_user.address || user_app.email != current_user.email || user_app.phone != current_user.phone || user_app.rib != current_user.rib %>
-              <div class="alert-icons">
-                <% if user_app.address != current_user.address %>
-                  <i class="fa-solid fa-circle-exclamation" title="adresse non à jour" id="warning"></i>
-                <% end %>
-                <% if user_app.email != current_user.email %>
-                  <i class="fa-solid fa-circle-exclamation" title="email non à jour" id="warning"></i>
-                <% end %>
-                <% if user_app.phone != current_user.phone %>
-                  <i class="fa-solid fa-circle-exclamation" title="numéro de téléphone non à jour" id="warning"></i>
-                <% end %>
-                <% if user_app.rib != current_user.rib %>
-                  <i class="fa-solid fa-circle-exclamation" title="RIB non à jour" id="warning"></i>
-                <% end %>
-              </div>
-          <% end %>
-              <%= link_to user_app_path(user_app), data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'custom-icon-link' do %>
-                <i class="delete fa-solid fa-trash"></i>
-              <% end %>
-              </div>
-          </div>
+      <div class="app-card card" data-action="click->hello#grow">
+        <div class="app-card-header d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center app-info-container">
+            <div id="image">
+              <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.jpg", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.jpg") %>
+              <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.png", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.png") %>
             </div>
+            <div class="app-info">
+              <h3><%= user_app.app.name %></h3>
+            </div>
+          </div>
+          <%= link_to user_app_path(user_app), data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'custom-icon-link' do %>
+            <i class="delete fa-solid fa-trash"></i>
+          <% end %>
+        </div>
 
-            <div class="card little-card" id="userCard" style="cursor: pointer; width: 100%;">
+        <div class="card mb-3 little-card" id="userCard" style="cursor: pointer; width: 100%;">
           <div id="moreInfo" style="display: none;">
-            <p class="card-text ">
+            <!-- Contenu caché affiché après clic -->
+            <p class="card-text just">
               <strong>Adresse :</strong> <%= user_app.address %>
               <% if user_app.address != current_user.address %>
                 <i class="fa-solid fa-exclamation-triangle text-warning ms-2" title="Adresse non à jour"></i>
@@ -48,41 +32,40 @@
                 <i class="fa-solid fa-exclamation-triangle text-warning ms-2" title="Email non à jour"></i>
               <% end %>
             </p>
-            <!-- Contenu caché affiché après clic -->
+            <!-- Ajoutez les autres champs ici -->
             <p class="card-text d-flex align-items-center">
-              <strong>Téléphone :</strong> <%= user_app.phone %>
-              <% if user_app.phone != current_user.phone %>
-                <i class="fa-solid fa-exclamation-triangle text-warning ms-2" title="Téléphone non à jour"></i>
-              <% end %>
-            </p>
-              <p class="card-text"><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
-              <p class="card-text"><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
-              <p class="card-text">
-                <strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %>
-              </p>
-              <p class="card-text d-flex align-items-center">
-                <strong>RIB :</strong> <%= user_app.encrypt_rib %>
-                <% if user_app.rib != current_user.rib %>
-                  <i class="fa-solid fa-exclamation-trianrailsgle text-warning ms-2" title="RIB non à jour"></i>
+                <strong>Téléphone :</strong> <%= user_app.phone %>
+                <% if user_app.phone != current_user.phone %>
+                  <i class="fa-solid fa-exclamation-triangle text-warning ms-2" title="Téléphone non à jour"></i>
                 <% end %>
               </p>
+                <p class="card-text"><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
+                <p class="card-text"><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
+                <p class="card-text">
+                  <strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %>
+                </p>
+                <p class="card-text">
+                  <strong class= >RIB :</strong> <%= user_app.rib %>
+                  <% if user_app.rib != current_user.rib %>
+                    <i class="fa-solid fa-exclamation-triangle text-warning ms-2" title="RIB non à jour"></i>
+                  <% end %>
+                </p>
 
-            <div class="redirect_links d-flex justify-content-end">
-              <% if user_app.app.url_redirections.present? %>
-                <% if user_app.app.url_redirections["rib"].present? %>
-                  <%= link_to user_app.app.url_redirections["rib"], target: "_blank", class: 'btn btn-dark ml-2' do %>
-                    <i class=" icon fa-solid fa-building-columns"></i> cliquez ici pour aller sur le site
+              <div class="redirect_links d-flex justify-content-end">
+                <% if user_app.app.url_redirections.present? %>
+                  <% if user_app.app.url_redirections["rib"].present? %>
+                    <%= link_to user_app.app.url_redirections["rib"], target: "_blank", class: 'btn btn-dark ml-2' do %>
+                      <i class=" icon fa-solid fa-building-columns"></i> cliquez ici pour aller sur le site
+                    <% end %>
+                  <% end %>
+                  <% if user_app.app.url_redirections["address"].present? %>
+                    <%= link_to user_app.app.url_redirections["address"], target: "_blank", class: 'btn btn-dark ml-2' do %>
+                      <i class="icon fa-solid fa-house"></i> cliquez ici pour aller sur le site
+                    <% end %>
                   <% end %>
                 <% end %>
-                <% if user_app.app.url_redirections["address"].present? %>
-                  <%= link_to user_app.app.url_redirections["address"], target: "_blank", class: 'btn btn-dark ml-2' do %>
-                    <i class="icon fa-solid fa-house"></i> cliquez ici pour aller sur le site
-                  <% end %>
-                <% end %>
-              <% end %>
-            </div>
+              </div>
           </div>
-        </div>
         </div>
       </div>
     <% end %>
