@@ -4,8 +4,9 @@
 <div class="formulaire">
   <%= simple_form_for @user_app do |f| %>
     <!-- Le champ Application ne sera pas modifiable -->
+    <div id="searchapps">
   <%= f.input :app_id, collection: App.all, label: 'Application' %>
-
+    </div>
     <!-- Nom modifiable -->
     <div class="form-group">
       <label>Nom :</label>
