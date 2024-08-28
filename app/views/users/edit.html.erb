@@ -40,6 +40,7 @@
 
 <h1 id="titre">Modifier mes coordonnées</h1>
 <%= simple_form_for @user, url: update_my_profile_path, method: :patch do |f| %>
+
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "erreur") %> interdite(s) de sauvegarder :</h2>
@@ -51,7 +52,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="formulaires">
+  <div class="formulaires" data-controller="remove">
    <div class="d-flex justify-content-between" id="center">
     <div class="edit-user">
       <div class="form-group">
@@ -85,7 +86,7 @@
       <%= f.input :photo, label: 'Photo' %>
     </div>
   </div>
-    <div id=enregister>
+    <div id="enregister">
       <%= f.button :submit, value: 'Enregistrer', class: 'submit-button' %>
     </div>
 </div>

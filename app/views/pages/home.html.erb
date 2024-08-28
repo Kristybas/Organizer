@@ -2,17 +2,19 @@
 <div class="search-bar d-flex align-items-center">
   <%= form_with url: root_path, method: :get, local: true, class: "d-flex w-100" do |form| %>
     <%= form.text_field :query, placeholder: "Entrez votre recherche", class: "form-control me-2" %>
-    <%= form.submit "Rechercher", class: " recherche btn btn-dark" %>
+    <%= form.submit "Rechercher", class: "btn btn-outline-dark ml-2" %>
   <% end %>
 </div>
 <hr id="barre">
 <h3>Vos démarches</h3>
 <div class="card-container">
   <div id="ajouter-une-demarche">
-    <%= link_to new_demarche_path, class: "btn btn-outline-dark ml-2" do %>
+    <%= link_to new_demarche_path, class: "btn btn-outline-dark ml-2"  do %>
       <i class="fa-solid fa-file-circle-plus"></i>
       Ajouter une démarche
     <% end %>
   </div>
   <%= render 'user_apps/cards' %>
 </div>
+
+<%= console %>

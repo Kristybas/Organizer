@@ -1,9 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["userCard", "moreInfo"]
+  static targets = ["userCard", "moreInfo", "info"]
   connect() {
-    console.log("Hello, Stimulus!", this.element)
+    //console.log("Hello, Stimulus!", this.element)
+    // console.log(this.userCardTarget)
+    // console.log(.infoTarget)
+
   }
 
   grow(event) {
@@ -17,7 +20,8 @@ export default class extends Controller {
     // }
 
     if (event.currentTarget.classList.contains("expanded")) {
-      console.log("expanded");
+
+
       event.currentTarget.classList.remove("expanded");
       event.currentTarget.querySelector("#moreInfo").style.display = "none";
     }
