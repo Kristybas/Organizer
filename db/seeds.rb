@@ -214,7 +214,7 @@ p "creating Crédit Agricole app"
 credit_agricole = App.new
 credit_agricole.logo = "creditagricole.jpg"
 
-credit_agricole.name = "Credit_Agricole"
+credit_agricole.name = "Credit Agricole"
 credit_agricole.url_redirections = {
  address: "https://www.credit-agricole.fr/particulier/conseils/magazine/tout-un-mag/demenagement-les-10-reflexes-du-credit-agricole.html#:~:text=PR%C3%89VENIR%20SON%20BANQUIER&text=Ou%20vous%20%C3%AAtes%20d%C3%A9j%C3%A0%20client,ou%20de%20suivre%20ces%20d%C3%A9marches" ,
  rib: "https://www.credit-agricole.fr/particulier/conseils/magazine/tout-un-mag/comment-changer-de-banque-avec-la-loi-macron-c-est-facile.html"
@@ -258,7 +258,7 @@ p "creating  Societe Generale app"
 societe_generale = App.new
 societe_generale.logo = "societegeneral.png"
 
-societe_generale.name = "Societe_generale"
+societe_generale.name = "Societe generale"
 societe_generale.url_redirections = {
  addresse:"https://particuliers.sg.fr/nos-conseils/comptes-et-cartes/demenage-change-banque" ,
  rib: "https://particuliers.sg.fr/services-en-ligne/mobilite-bancaire-service-bienvenue"
@@ -310,17 +310,17 @@ free.save!
 
 
 
-p "creating Bouygues Telecome app"
+p "creating Bouygues Telecom app"
 
-bouyguestelecome = App.new
-bouyguestelecome.logo = "bouyguestelecom.jpg"
+bouyguestelecom = App.new
+bouyguestelecom.logo = "bouyguestelecom.jpg"
 
-bouyguestelecome.name = "BouyguesTelecome"
-bouyguestelecome.url_redirections = {
+bouyguestelecom.name = "BouyguesTelecom"
+bouyguestelecom.url_redirections = {
    addresse: "https://www.bouyguestelecom.fr/offres-internet/demenagement" ,
    rib: "https://www.assistance.bouyguestelecom.fr/s/article/coordonnees-bancaires-adresse-facturation"
   }
-bouyguestelecome.save!
+bouyguestelecom.save!
 
 
 
@@ -341,7 +341,7 @@ sosh.save!
 p "creating Disney app"
 
 disney = App.new
-disney.logo = "disneyplus.png"
+disney.logo = "disney.png"
 
 disney.name = "Disney"
 disney.url_redirections = {
