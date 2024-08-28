@@ -60,7 +60,7 @@ class UserAppsController < ApplicationController
   # Méthode strong parameters pour permettre uniquement les attributs autorisés
   def user_app_params
     params.require(:user_app).permit(
-      :user_id, :app_id, :phone, :address, :email, :date_prelevement, :date_renouvellement, :montant, :rib, :name
+      :id, :user_id, :app_id, :phone, :address, :email, :date_prelevement, :date_renouvellement, :montant, :rib, :name
     )
   end
 end

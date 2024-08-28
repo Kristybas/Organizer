@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'mes_demarches', to: 'user_apps#index'
   get 'new_demarche', to: 'user_apps#new'
 
+
   get '/demenagement', to: 'users#je_demenage', as: 'je_demenage'
   get '/chanement_rib', to: 'users#rib', as: 'rib'
 
