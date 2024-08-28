@@ -14,7 +14,7 @@
       <p><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
       <p><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
       <p><strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %></p>
-      <p><strong>RIB :</strong> <%= user_app.rib %></p>
+      <p><strong>RIB :</strong> <%= user_app.encrypt_rib %></p>
     </div>
   </div>
     <% end %>

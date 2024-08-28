@@ -34,22 +34,25 @@
         <% end %>
       </div>
 
-      <div class="form-group">
-        <label>Email</label>
-        <% if current_user.email.present? %>
-          <span class="info"><%= current_user.email %></span>
-        <% else %>
-          <%= f.input :email, placeholder: "Email", label: false %>
-        <% end %>
-      </div>
-      <div class="form-group">
-        <label>RIB</label>
-        <% if current_user.rib.present? %>
-          <span class="info"><%= current_user.rib %></span>
-        <% else %>
-          <%= f.input :rib, placeholder: "RIB", label: false %>
-        <% end %>
-      </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <% if current_user.email.present? %>
+        <span class="info"><%= current_user.email %></span>
+      <% else %>
+        <%= f.input :email, placeholder: "Email", label: false %>
+      <% end %>
+    </div>
+    <div class="form-group" data-controller="rib">
+      <label>RIB</label>
+      <% if current_user.rib.present? %>
+        <span class= " d-none info" data-rib-target="decrypt"><%= current_user.rib %></span>
+        <span class="info" data-rib-target="encrypt"><%= current_user.encrypt_rib %></span>
+        <i class="fa-solid fa-eye" data-action="click->rib#toggle"></i>
+      <% else %>
+        <%= f.input :rib, placeholder: "RIB", label: false %>
+      <% end %>
+
     </div>
     <div class="d-flex justify-content-between" id="center">
   <div id="date">

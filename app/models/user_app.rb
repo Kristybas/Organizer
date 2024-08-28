@@ -7,6 +7,10 @@ class UserApp < ApplicationRecord
   validates :user_id, presence: true
   validates :app_id, presence: true
   # Ajoute d'autres validations si nécessaire
-
+  def encrypt_rib
+    if rib != nil
+      rib.gsub(/.(?=.{3})/, '*')
+    end
+  end
   # Autres méthodes et logiques liées à UserApp
 end

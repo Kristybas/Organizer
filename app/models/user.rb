@@ -7,7 +7,11 @@ class User < ApplicationRecord
          has_many :user_apps
 
 
+         # Callback to encrypt RIB before saving
+
   def encrypt_rib
-    rib.gsub(/.(?=.{3})/, '*')
+    if rib != nil
+      rib.gsub(/.(?=.{3})/, '*')
+    end
   end
 end
