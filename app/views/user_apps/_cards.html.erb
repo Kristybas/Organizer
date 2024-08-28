@@ -43,10 +43,10 @@
               <p class="card-text">
                 <strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %>
               </p>
-              <p class="card-text">
-                <strong class= >RIB :</strong> <%= user_app.rib %>
+              <p class="card-text d-flex align-items-center">
+                <strong>RIB :</strong> <%= user_app.encrypt_rib %>
                 <% if user_app.rib != current_user.rib %>
-                  <i class="fa-solid fa-exclamation-triangle text-warning ms-2" title="RIB non à jour"></i>
+                  <i class="fa-solid fa-exclamation-trianrailsgle text-warning ms-2" title="RIB non à jour"></i>
                 <% end %>
               </p>
 
