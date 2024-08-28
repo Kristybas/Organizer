@@ -17,16 +17,11 @@
             <% end %>
 
             <p class="info-card-text">
-              <strong>Adresse :</strong> <%= user_app.address %>
-              <% if user_app.address != current_user.address %>
-                <i class="alert-icon fa-solid fa-circle-exclamation"  title="Adresse non à jour"></i>
-              <% end %>
+              <strong>Adresse :</strong> <%= current_user.address %>
             </p>
             <p class="info-card-text">
-              <strong>Email :</strong> <%= user_app.email %>
-              <% if user_app.email != current_user.email %>
-                <i class="alert-icon fa-solid fa-circle-exclamation"  title="Email non à jour"></i>
-              <% end %>
+              <strong>Email :</strong> <%= current_user.email %>
+
             </p>
             <%= link_to  edit_user_app_path(user_app) do %>
             <i class="fa-regular fa-pen-to-square"></i>
@@ -41,6 +36,18 @@
           <div id="moreInfo" style="display: none;">
             <!-- Contenu caché affiché après clic -->
             <p class="card-text d-flex align-items-center">
+              <p class="info-card-text">
+              <strong>Adresse :</strong> <%= user_app.address %>
+              <% if user_app.address != current_user.address %>
+                <i class="alert-icon fa-solid fa-circle-exclamation"  title="Adresse non à jour"></i>
+              <% end %>
+            </p>
+            <p class="info-card-text">
+              <strong>Email :</strong> <%= user_app.email %>
+              <% if user_app.email != current_user.email %>
+                <i class="alert-icon fa-solid fa-circle-exclamation"  title="Email non à jour"></i>
+              <% end %>
+            </p>
               <strong>Téléphone :</strong> <%= user_app.phone %>
               <% if user_app.phone != current_user.phone %>
                 <i class="alert-icons fa-solid fa-circle-exclamation"  title="Téléphone non à jour"></i>
