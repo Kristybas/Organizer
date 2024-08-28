@@ -3,72 +3,68 @@
   <h1 id="titre">Ajout d'une démarche</h1>
 <div class="formulaire">
   <%= simple_form_for @user_app do |f| %>
-    <%= f.input :app_id, collection: App.all, label: 'Application' %>
+    <!-- Le champ Application ne sera pas modifiable -->
+  <%= f.input :app_id, collection: App.all, label: 'Application' %>
 
-      <div class="form-group">
-        <label>Nom : </label>
-        <% if current_user.first_name.present? %>
-          <span class="info"><%= current_user.first_name %></span>
-        <% else %>
-          <%= f.input :name, placeholder: "Nom", label: false %>
-        <% end %>
-
-         </div>
-      <div class="form-group">
-        <label style="letter-spacing:1px">Téléphone :</label>
-        <% if current_user.phone.present? %>
-          <span class="info"><%= current_user.phone %></span>
-        <% else %>
-          <%= f.input :phone, placeholder: "Téléphone", label: false %>
-        <% end %>
-
+    <!-- Nom modifiable -->
+    <div class="form-group">
+      <label>Nom :</label>
+      <div id="modifform">
+        <%= f.input :name, placeholder: "Nom", label: false, input_html: { value: current_user.first_name } %>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label>Adresse : </label>
-        <% if current_user.address.present? %>
-          <span class="info"><%= current_user.address %></span>
-        <% else %>
-          <%= f.input :address, placeholder: "Adresse", label: false %>
-        <% end %>
+    <!-- Téléphone modifiable -->
+    <div class="form-group">
+      <label style="letter-spacing:1px">Téléphone :</label>
+      <div id="modifform">
+        <%= f.input :phone, placeholder: "Téléphone", label: false, input_html: { value: current_user.phone } %>
       </div>
+    </div>
 
+    <!-- Adresse modifiable -->
+    <div class="form-group">
+      <label>Adresse :</label>
+      <div id="modifform">
+        <%= f.input :address, placeholder: "Adresse", label: false, input_html: { value: current_user.address } %>
+      </div>
+    </div>
 
+    <!-- Email modifiable -->
     <div class="form-group">
       <label>Email :</label>
-      <% if current_user.email.present? %>
-        <span class="info"><%= current_user.email %></span>
-      <% else %>
-        <%= f.input :email, placeholder: "Email", label: false %>
-      <% end %>
+      <div id="modifform">
+        <%= f.input :email, placeholder: "Email", label: false, input_html: { value: current_user.email } %>
+      </div>
     </div>
+
+    <!-- RIB modifiable avec icône de visibilité -->
     <div class="form-group" data-controller="rib">
       <label>RIB :</label>
-      <% if current_user.rib.present? %>
-        <span class= " d-none info" data-rib-target="decrypt"><%= current_user.rib %></span>
+      <div id="modifform">
+        <%= f.input :rib, placeholder: "RIB", label: false, input_html: { value: current_user.rib, class: "d-none", data: { rib_target: "decrypt" } } %>
         <span class="info" data-rib-target="encrypt"><%= current_user.encrypt_rib %></span>
         <i class="fa-solid fa-eye" data-action="click->rib#toggle"></i>
-      <% else %>
-        <%= f.input :rib, placeholder: "RIB", label: false %>
-      <% end %>
-
+      </div>
     </div>
+
+    <!-- Dates de prélèvement et de renouvellement -->
     <div class="d-flex justify-content-between" id="center">
-  <div id="date">
-    <%= f.input :date_prelevement, placeholder: "Date de prélèvement", label: 'Date de prélèvement', as: :date, html5: true, class: 'input-color' %>
-    <%= f.input :date_renouvellement, placeholder: "Date de renouvellement", label: 'Date de renouvellement', as: :date, html5: true, class: 'input-color' %>
-  </div>
-  </div>
-    <div id="montant">
-      <%= f.input :montant, placeholder: "Montant", label: false,  class: 'input-color' %>
+      <div id="date">
+        <%= f.input :date_prelevement, placeholder: "Date de prélèvement", label: 'Date de prélèvement', as: :date, html5: true %>
+        <%= f.input :date_renouvellement, placeholder: "Date de renouvellement", label: 'Date de renouvellement', as: :date, html5: true %>
+      </div>
     </div>
 
-    <div id=enregister>
+    <!-- Montant modifiable -->
+    <div id="montant">
+      <%= f.input :montant, placeholder: "Montant", label: false %>
+    </div>
+
+    <!-- Bouton Enregistrer -->
+    <div id="enregistrer" class="text-center">
       <%= f.button :submit, value: 'Enregistrer', class: 'submit-button' %>
     </div>
 
-
+  <% end %>
 </div>
-
-<% end %>
-<%= link_to 'Retour', root_path %>
