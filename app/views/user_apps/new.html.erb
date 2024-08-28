@@ -2,7 +2,6 @@
 <%= render 'pages/coordonnées' %>
   <h1 id="titre">Ajout d'une démarche</h1>
 <div class="formulaire">
-
   <%= simple_form_for @user_app do |f| %>
     <%= f.input :app_id, collection: App.all, label: 'Application' %>
     <div id="infos">
@@ -13,8 +12,8 @@
         <% else %>
           <%= f.input :name, placeholder: "Nom", label: false %>
         <% end %>
-      </div>
 
+         </div>
       <div class="form-group">
         <label>Téléphone</label>
         <% if current_user.phone.present? %>
@@ -56,12 +55,12 @@
     </div>
     <div class="d-flex justify-content-between" id="center">
   <div id="date">
-    <%= f.input :date_prelevement, placeholder: "Date de prélèvement", label: 'Date de prélèvement', as: :date, html5: true %>
-    <%= f.input :date_renouvellement, placeholder: "Date de renouvellement", label: 'Date de renouvellement', as: :date, html5: true %>
+    <%= f.input :date_prelevement, placeholder: "Date de prélèvement", label: 'Date de prélèvement', as: :date, html5: true, class: 'input-color' %>
+    <%= f.input :date_renouvellement, placeholder: "Date de renouvellement", label: 'Date de renouvellement', as: :date, html5: true, class: 'input-color' %>
   </div>
   </div>
     <div id="montant">
-      <%= f.input :montant, placeholder: "Montant", label: false %>
+      <%= f.input :montant, placeholder: "Montant", label: false,  class: 'input-color' %>
     </div>
 
     <div id=enregister>
