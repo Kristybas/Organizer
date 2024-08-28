@@ -1,51 +1,41 @@
-#warning {
-  margin-left: 10px;
-}
-
-.custom-btn {
-  width: 150px;
-  /* Largeur du bouton */
-  height: auto;
-  /* Hauteur du bouton */
-  padding: 5px 20px;
-  margin-right: 10px;
-  margin-top: 10px;
-}
-
 .container-all {
   margin: auto;
   background-color: #FFD18E;
   padding: 10px;
-  // margin: 60px;
   border-radius: 10px;
-  height: auto;
   width: 100%;
-  margin: auto;
+  /* Ajuster pour prendre la pleine largeur disponible */
+  max-width: 1200px;
+  /* Limite maximale de largeur pour les grands écrans */
+  display: flex;
+  flex-wrap: wrap;
+  /* Centre les cartes horizontalement */
+  height: auto;
+  align-items: flex-start;
+  /* Aligne les cartes en haut */
 }
 
 .app-cards-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
-
+  gap: 20px;
+  /* Ajoute un espace entre les cartes */
+  justify-content: center;
+  /* Centre les cartes */
+  width: 100%;
 }
 
 .app-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.app-card.grow {
-  transform: scale(1.1);
-  /* Agrandit la carte lorsqu'elle est cliquée */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 10px;
+  /* Ajuste pour trois cartes par ligne, en comptant les marges */
+  box-sizing: border-box;
 }
 
 .warning-icon {
-
   font-size: 1.5rem;
   margin-right: 10px;
 }
@@ -81,9 +71,9 @@ h4 {
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  overflow: auto;
+  overflow: hidden;
+  /* Assure que l'image est bien contenue */
 }
-
 
 .delete-icon {
   position: absolute;
@@ -100,18 +90,23 @@ h4 {
   /* Espace entre les lignes */
 }
 
-.ms-2 {
-  margin-left: 0.5rem;
-  /* Espace entre l'icône et le texte */
-}
-
 .redirect_links {
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-.icon {
+#warning {
+  margin-left: 10px;
+}
+
+.custom-btn {
+  width: 150px;
+  /* Largeur du bouton */
+  height: auto;
+  /* Hauteur du bouton */
+  padding: 5px 20px;
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 strong {
@@ -127,5 +122,4 @@ strong {
 
 #warning {
   margin: 0;
-
 }
