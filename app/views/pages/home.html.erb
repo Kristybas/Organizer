@@ -1,5 +1,5 @@
 <%= render 'pages/coordonnées' %>
-<div class="search-bar d-flex align-items-center">
+<div class="search-bar d-flex align-items-center" id="searchdesign">
   <%= form_with url: root_path, method: :get, local: true, class: "d-flex w-100" do |form| %>
     <%= form.text_field :query, placeholder: "Entrez votre recherche", class: "form-control me-2" %>
     <%= form.submit "Rechercher", class: "btn btn-outline-dark ml-2" %>

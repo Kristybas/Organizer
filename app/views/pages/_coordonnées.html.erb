@@ -17,26 +17,28 @@
         <i class="fa-regular fa-pen-to-square"></i>
         <% end %>
     </div>
-      <div class="col-md-6">
-        <ul>
-        <li>
+    <div class="card-text d-flex align-items-baseline justify-content-around">
+      <div >
+        <ul >
+        <li class="card-texts">
           <i class="fa-regular fa-address-card" ></i>
           <%= "#{current_user.last_name} #{current_user.first_name}" %>
-        </li>
-          <li><i class="fa-regular fa-user"style= "margin-right: 10px"></i><%= current_user.email %></li>
+        </li class="card-texts">
+          <li class="card-texts"><i class="fa-regular fa-user"style= "margin-right: 10px"></i><%= current_user.email %></li>
         </ul>
       </div>
-      <div class="col-md-6">
+      <div >
         <ul>
-          <li><i class="fa-solid fa-house" style= "margin-right: 10px"></i><%= current_user.address %></li>
-          <li><i class="fa-solid fa-phone" style= "margin-right: 10px"></i><%= current_user.phone %></li>
+          <li class="card-texts"><i class="fa-solid fa-house" style= "margin-right: 10px"></i><%= current_user.address %></li>
+          <li class="card-texts"><i class="fa-solid fa-phone" style= "margin-right: 10px"></i><%= current_user.phone %></li>
           <div class="form-group" data-controller="rib">
-          <li><i class="fa-solid fa-money-check" style= "margin-right: 10px"></i></li>
+          <li class="card-texts"><i class="fa-solid fa-money-check" style= "margin-right: 10px"></i></li>
           <span class= " d-none info" data-rib-target="decrypt"><%= current_user.rib %></span>
         <span class="info" data-rib-target="encrypt"><%= current_user.encrypt_rib %></span>
         <i class="fa-solid fa-eye" data-action="click->rib#toggle" style="margin-left: 10px;"></i>
         </ul>
       </div>
+    </div>
 
 
     </div>

@@ -84,6 +84,7 @@
 
     <div class="form-group photo-column">
       <%= f.input :photo, as: :file %>
+      <%= image_tag(current_user.photo, style: "border-radius: 50%; margin-right: 20px; width: 90px; height: 90px; object-fit: cover;") %>
     </div>
   </div>
     <div id="enregister">
