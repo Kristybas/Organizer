@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   def encrypt_rib
     if rib != nil
-      rib.gsub(/.(?=.{3})/, '*')
+      rib.gsub(/.(?=.{2})/, '*')
     end
   end
 end

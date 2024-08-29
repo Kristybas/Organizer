@@ -1,11 +1,12 @@
-
 .formulaire {
   box-shadow: 3px 3px 3px 3px #ffe9c7;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: white;}
+  background-color: white;
+}
+
 .user-info {
   margin: 0;
   padding: 0;
@@ -25,6 +26,7 @@
 .edit-field.active {
   display: block;
 }
+
 #date {
   justify-content: space-between;
   display: flex;
@@ -42,12 +44,13 @@
 }
 
 .form-group label {
- font-weight: bold;
+  font-weight: bold;
 }
 
 .info {
   margin-left: 10px;
-  color: #333; /* Couleur du texte, ajustez selon vos préférences */
+  color: #333;
+  /* Couleur du texte, ajustez selon vos préférences */
 }
 
 input {
@@ -56,7 +59,8 @@ input {
 }
 
 input[type="text"] {
-  width: 100%; /* Assurez-vous que les champs de saisie utilisent tout l'espace disponible */
+  width: 100%;
+  /* Assurez-vous que les champs de saisie utilisent tout l'espace disponible */
 }
 
 #date .form-group {
@@ -72,6 +76,7 @@ input[type="text"] {
 #center {
   text-align: center;
 }
+
 #montant {
   padding-left: 5px;
   display: flex;
@@ -88,6 +93,7 @@ input[type="text"] {
   justify-content: center;
   align-items: center;
 }
+
 .formulaires {
   width: 70%;
   box-shadow: 3px 3px 3px 3px #ffe9c7;
@@ -95,31 +101,43 @@ input[type="text"] {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: white;}
-  #mini-card {
-    display: flex;
-    justify-content: space-between; /* Space between columns */
-    gap: 20px; /* Adjust space between columns */
-    align-items: flex-start; /* Align items at the top */
+  background-color: white;
+}
+
+#mini-card {
+  display: flex;
+  justify-content: space-between;
+  /* Space between columns */
+  gap: 20px;
+  /* Adjust space between columns */
+  align-items: flex-start;
+  /* Align items at the top */
+}
+
+.edit-user {
+  flex: 1;
+
+  input:focus {
+    border: 4px solid #FFD18E;
   }
 
-  .edit-user {
-    flex: 1; /* Each edit-user column takes up equal space */
-  }
+  /* Each edit-user column takes up equal space */
+}
 
-  .photo-column {
-    flex: 0.5; /* The photo column takes up half the space of an edit-user column */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.photo-column {
+  flex: 0.5;
+  /* The photo column takes up half the space of an edit-user column */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .form-group {
-    margin-bottom: 15px;
-  }
+.form-group {
+  margin-bottom: 15px;
+}
 
-  input[type="file"] {
-    display: block;
-    margin-top: 10px;
-  }
+input[type="file"] {
+  display: block;
+  margin-top: 10px;
+}
