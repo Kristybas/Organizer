@@ -14,49 +14,56 @@
   height: auto;
   align-items: flex-start;
   /* Aligne les cartes en haut */
+  margin-bottom: 50px;
 }
 
-.app-cards-container {
-  padding-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  /* Ajoute un espace entre les cartes */
-  justify-content: center;
-  /* Centre les cartes */
-  width: 100%;
-  margin-top: 20px;
-}
 
-.app-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  /* Ajuste pour trois cartes par ligne, en comptant les marges */
-  box-sizing: border-box;
-}
 
-.info-card-text {
-  margin-left: 10px;
-  margin-right: 10px;
-}
+#logo-card {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 
-.warning-icon {
-  font-size: 1.5rem;
-  margin-right: 10px;
-}
-
-.app-card-header {
-  margin: 10px;
-
-  h3 {
-    margin-left: 10px;
+  img {
+    padding: 10px;
+    border-radius: 20px;
   }
 }
 
-.app-info {
-  margin-left: 10px;
+.card-app {
+  border: 1px solid black;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 77vw;
 }
+
+.app-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 19px;
+
+}
+
+.name-count {
+  flex-grow: 1;
+  padding-left: 10px;
+  align-items: center;
+  display: flex
+}
+
+.change-count {
+  font-size: 15px;
+  padding-left: 46px;
+  color: #ff7800;
+}
+
+// }
+// petite carte
 
 .little-card {
   background-color: #ffffff;
@@ -64,14 +71,10 @@
   border: none;
 }
 
-.card-text {
+.card-texts {
   margin-left: 10px;
 }
 
-h4 {
-  padding-left: 10px;
-  font-weight: bold;
-}
 
 #image {
   width: 50px;
@@ -89,50 +92,25 @@ h4 {
   cursor: pointer;
 }
 
-.warning-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  /* Espace entre les lignes */
-}
 
 .redirect_links {
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-#warning {
-  margin-left: 10px;
-}
-
-.custom-btn {
-  width: 150px;
+.btn {
+  display: flex;
+  align-items: center;
   /* Largeur du bouton */
   height: auto;
   /* Hauteur du bouton */
-  padding: 5px 20px;
-  margin-right: 10px;
-  margin-top: 10px;
-}
-
-strong {
-  font-weight: bold;
-  margin-right: 5px;
 }
 
 .alert-icon {
-  display: flex;
-  justify-items: center;
+  margin-right: 8px;
 }
 
 .app-info {
   display: flex;
   align-items: center;
-}
-
-.alert-icons {
-  margin-left: 8px;
-  /* Espace entre le titre et l'icône */
-  color: #ff0000;
-  /* Couleur de l'icône d'alerte */
 }
