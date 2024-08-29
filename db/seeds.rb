@@ -9,7 +9,7 @@
 #   end
 
 # ENERGIES
-
+require 'open-uri'
 
 UserApp.destroy_all
 App.destroy_all
@@ -17,17 +17,42 @@ App.destroy_all
 User.destroy_all
 
 # Créer des utilisateurs
-users = [
-  { first_name: "John", last_name: "Doe", email: "john.doe@example.com", phone: "0123456789", address: "123 Main Street, Paris", rib: "FR7630006000011234567890189", password: "password" },
-  { first_name: "Jane", last_name: "Smith", email: "jane.smith@example.com", phone: "0987654321", address: "456 Elm Street, Lyon", rib: "FR7630006000019876543210987", password: "password" },
-  { first_name: "Alice", last_name: "Johnson", email: "alice.johnson@example.com", phone: "0111222333", address: "789 Oak Avenue, Marseille", rib: "FR7630006000011122334455667", password: "password" },
-  { first_name: "Bob", last_name: "Brown", email: "bob.brown@example.com", phone: "0333444555", address: "101 Pine Road, Nice", rib: "FR7630006000013334445556667", password: "password" }
-]
+# users = [
+#   # { first_name: "John", last_name: "Doe", email: "john.doe@example.com", phone: "0123456789", address: "123 Main Street, Paris", rib: "FR7630006000011234567890189", password: "password", photo: "https://res.cloudinary.com/doq2qvren/image/upload/v1724923295/development/29lc8c172xdl9dmwjnl3blgqr6y2.jpg" },
+#   # { first_name: "Jane", last_name: "Smith", email: "jane.smith@example.com", phone: "0987654321", address: "456 Elm Street, Lyon", rib: "FR7630006000019876543210987", password: "password", photo: "https://res.cloudinary.com/doq2qvren/image/upload/v1724924293/development/22ovv5gzwsqc1n8tjnxtxnnwlu77.jpg" },
+#   # { first_name: "Alice", last_name: "Johnson", email: "alice.johnson@example.com", phone: "0111222333", address: "789 Oak Avenue, Marseille", rib: "FR7630006000011122334455667", password: "password", photo: "https://res.cloudinary.com/doq2qvren/image/upload/v1724923379/development/m2kvl7kg2a53cmde03oro8x3wn82.jpg" },
+#   { first_name: "Bob", last_name: "Brown", email: "bob.brown@example.com", phone: "0333444555", address: "101 Pine Road, Nice", rib: "FR7630006000013334445556667", password: "password" },
+# ]
 
-# Insérer les utilisateurs dans la base de données
-users.each do |user_data|
-  User.create!(user_data)
-end
+
+
+
+# Créer un utilisateur avec une photo
+file=URI.open("https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=800")
+
+user = User.create!(first_name: "John", last_name: "Doe", email: "johndoe@mail.com", phone: "0123456789", address: "123 Main Street, Paris", rib: "FR7630006000011234567890189", password: "password")
+user.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+user.save!
+
+file2=URI.open("https://images.pexels.com/photos/18108130/pexels-photo-18108130/free-photo-of-nature-ensoleille-soleil-mode.jpeg?auto=compress&cs=tinysrgb&w=800")
+
+user2 = User.create!(first_name: "Jane", last_name: "smith", email: "janesmith@mail.com", phone: "0123456789", address: "123 Main Street, Paris", rib: "FR7630006000011234567890189", password: "password")
+user2.photo.attach(io: file2, filename: "profile2.png", content_type: "image/png")
+user2.save!
+
+file3=URI.open("https://images.pexels.com/photos/718978/pexels-photo-718978.jpeg?auto=compress&cs=tinysrgb&w=800")
+
+user3 = User.create!(first_name: "Alice", last_name: "Johnson", email: "alicejohnson@mail.com", phone: "0123456789", address: "123 Main Street, Paris", rib: "FR7630006000011234567890189", password: "password")
+user3.photo.attach(io: file3, filename: "profile2.png", content_type: "image/png")
+user3.save!
+
+file4=URI.open("https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=800")
+
+user4= User.create!(first_name: "Bob", last_name: "Brown", email: "bobbrown@mail.com", phone: "0123456789", address: "123 Main Street, Paris", rib: "FR7630006000011234567890189", password: "password")
+user4.photo.attach(io: file4, filename: "profile2.png", content_type: "image/png")
+user4.save!
+
+
 
 puts "Created #{User.count} users."
 p "creating EDF app"
