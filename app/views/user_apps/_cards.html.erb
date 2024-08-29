@@ -38,7 +38,8 @@
         <div class="card little-card" id="userCard" style="cursor: pointer; width: 100%;">
           <div id="moreInfo" style="display: none;">
             <!-- Contenu caché affiché après clic -->
-            <p class="card-text d-flex align-items-center">
+            <p class="card-text d-flex align-items-baseline">
+            <div>
               <p class="card-texts">
               <strong>Adresse :</strong> <%= user_app.address %>
               <% if user_app.address != current_user.address %>
@@ -57,16 +58,20 @@
                 <i class="alert-icon fa-solid fa-circle-exclamation"  title="Téléphone non à jour"></i>
               <% end %>
             </p>
-              <p class="card-texts"><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
-              <p class="card-texts"><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
-              <p class="card-texts">
-                <strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %>
-              </p>
               <p class="card-texts">
                 <strong class= >RIB :</strong> <%= user_app.rib %>
                 <% if user_app.rib != current_user.rib %>
                   <i class="alert-icon fa-solid fa-circle-exclamation"  title="RIB non à jour"></i>
                 <% end %>
+              </p>
+            </div>
+            <div>
+              <p class="card-texts"><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
+              <p class="card-texts"><strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %></p>
+              <p class="card-texts">
+                <strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %>
+              </p>
+              </div>
             <div class="redirect_links d-flex justify-content-end">
               <% if user_app.app.url_redirections.present? %>
                 <% if user_app.app.url_redirections["rib"].present? %>
@@ -81,7 +86,6 @@
                 <% end %>
               <% end %>
             </div>
-              </p>
           </div>
         </div>
             </div>
