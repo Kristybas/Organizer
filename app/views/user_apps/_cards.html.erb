@@ -15,13 +15,11 @@
             <% if user_app.address != current_user.address || user_app.email != current_user.email || user_app.phone != current_user.phone || user_app.rib != current_user.rib %>
               <i class="alert-icons fa-solid fa-circle-exclamation" title="Coordonnées non à jour"></i>
             <% end %>
-
             <p class="info-card-text">
               <strong>Adresse :</strong> <%= current_user.address %>
             </p>
             <p class="info-card-text">
               <strong>Email :</strong> <%= current_user.email %>
-
             </p>
 
             <%= link_to  edit_user_app_path(user_app) do %>
@@ -51,7 +49,7 @@
             </p>
               <strong>Téléphone :</strong> <%= user_app.phone %>
               <% if user_app.phone != current_user.phone %>
-                <i class="alert-icons fa-solid fa-circle-exclamation"  title="Téléphone non à jour"></i>
+                <i class="alert-icon fa-solid fa-circle-exclamation"  title="Téléphone non à jour"></i>
               <% end %>
             </p>
               <p class="card-text"><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
@@ -62,19 +60,19 @@
               <p class="card-text">
                 <strong class= >RIB :</strong> <%= user_app.rib %>
                 <% if user_app.rib != current_user.rib %>
-                  <i class="alert-icons fa-solid fa-circle-exclamation"  title="RIB non à jour"></i>
+                  <i class="alert-icon fa-solid fa-circle-exclamation"  title="RIB non à jour"></i>
                 <% end %>
               </p>
 
             <div class="redirect_links d-flex justify-content-end">
               <% if user_app.app.url_redirections.present? %>
                 <% if user_app.app.url_redirections["rib"].present? %>
-                  <%= link_to user_app.app.url_redirections["rib"], target: "_blank", class: 'btn btn-dark ml-2' do %>
+                  <%= link_to user_app.app.url_redirections["rib"], target: "_blank", class: '"btn btn-dark ml-2"' do %>
                     <i class=" alert-icon fa-solid fa-building-columns"></i> cliquez ici pour aller sur le site
                   <% end %>
                 <% end %>
                 <% if user_app.app.url_redirections["address"].present? %>
-                  <%= link_to user_app.app.url_redirections["address"], target: "_blank", class: 'btn btn-dark ml-2' do %>
+                  <%= link_to user_app.app.url_redirections["address"], target: "_blank", class: '"btn btn-dark ml-2"' do %>
                     <i class="alert-icon fa-solid fa-house"></i> cliquez ici pour aller sur le site
                   <% end %>
                 <% end %>

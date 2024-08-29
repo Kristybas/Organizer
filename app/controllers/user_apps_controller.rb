@@ -36,7 +36,7 @@ class UserAppsController < ApplicationController
   def update
 
     if @user_app.update(user_app_params)
-      redirect_to @user_app, notice: 'UserApp was successfully updated.'
+      redirect_to root_path, notice: 'UserApp was successfully updated.'
     else
       render :edit
     end
