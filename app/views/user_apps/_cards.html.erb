@@ -3,84 +3,77 @@
     <% @user_apps.each do |user_app_data| %>
       <% user_app, changes_count = user_app_data %>
       <div class="card-container card-app" data-action="click->hello#grow">
-        <div class=" d-flex gap-3">
-            <div id="logo-card">
-              <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.jpg", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.jpg") %>
-              <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.png", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.png") %>
-            </div>
-            <div class="name-count">
-              <span class="fs-3"><%= user_app.app.name %></span>
-               <% if changes_count > 0 %>
-              <span class="change-count"><i class="alert-icons fa-solid fa-circle-exclamation"></i>
-              <%= changes_count %> changement<%= 's' if changes_count > 1 %></span>
-          <% end %>
-            </div>
-            <div class="app-info">
-              <p class="pe-3"> <%# adresse-card-text %>
-                <strong>Adresse :</strong> <%= current_user.address %>
-              </p>
-              <p class="pe-5"> <%# email-card-text %>
-                <strong>Email :</strong> <%= current_user.email %>
-              </p>
-
-              <%= link_to  edit_user_app_path(user_app) do %>
+        <div class="d-flex gap-3">
+          <div id="logo-card">
+            <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.jpg", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.jpg") %>
+            <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.png", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.png") %>
+          </div>
+          <div class="name-count">
+            <span class="fs-3"><%= user_app.app.name %></span>
+            <% if changes_count > 0 %>
+              <span class="change-count">
+                <i class="alert-icons fa-solid fa-circle-exclamation"></i>
+                <%= changes_count %> changement<%= 's' if changes_count > 1 %>
+              </span>
+            <% end %>
+          </div>
+          <div class="app-info">
+            <p class="pe-3">
+              <strong>Adresse :</strong> <%= current_user.address %>
+            </p>
+            <p class="pe-5">
+              <strong>Email :</strong> <%= current_user.email %>
+            </p>
+            <%= link_to edit_user_app_path(user_app) do %>
               <i class="fa-regular fa-pen-to-square"></i>
-              <% end %>
-
+            <% end %>
             <%= link_to user_app_path(user_app), data: { turbo_method: :delete, confirm: 'Êtes-vous sûr de vouloir supprimer cette application ?' }, class: 'custom-icon-link pe-4' do %>
               <i class="delete fa-solid fa-trash"></i>
             <% end %>
-
-
-            </div>
+          </div>
         </div>
-
         <div class="card little-card" id="userCard" style="cursor: pointer; width: 100%;">
           <div id="moreInfo" style="display: none;">
             <!-- Contenu caché affiché après clic -->
-
-            
-
-            <div class="card-text d-flex align-items-center">
-
-            <div>
-              <p class="card-texts">
-              <strong>Adresse :</strong> <%= user_app.address %>
-              <% if user_app.address != current_user.address %>
-                <i class="alert-icon fa-solid fa-circle-exclamation"  title="Adresse non à jour"></i>
-              <% end %>
-            </p>
-            <p class="card-texts">
-              <strong>Email :</strong> <%= user_app.email %>
-              <% if user_app.email != current_user.email %>
-                <i class="alert-icon fa-solid fa-circle-exclamation"  title="Email non à jour"></i>
-              <% end %>
-            </p>
-            <p class="card-texts">
-              <strong>Téléphone :</strong> <%= user_app.phone %>
-              <% if user_app.phone != current_user.phone %>
-                <i class="alert-icon fa-solid fa-circle-exclamation"  title="Téléphone non à jour"></i>
-              <% end %>
-              </p>
-
-              <p class="card-texts">
-                <strong class= >RIB :</strong> <%= user_app.rib %>
-                <% if user_app.rib != current_user.rib %>
-                  <i class="alert-icon fa-solid fa-circle-exclamation"  title="RIB non à jour"></i>
-                <% end %>
-
+            <div class="card-text d-flex align-items-baseline justify-content-around">
+              <div>
+                <p class="card-texts">
+                  <strong>Adresse :</strong> <%= user_app.address %>
+                  <% if user_app.address != current_user.address %>
+                    <i class="alert-icon fa-solid fa-circle-exclamation" title="Adresse non à jour"></i>
+                  <% end %>
+                </p>
+                <p class="card-texts">
+                  <strong>Email :</strong> <%= user_app.email %>
+                  <% if user_app.email != current_user.email %>
+                    <i class="alert-icon fa-solid fa-circle-exclamation" title="Email non à jour"></i>
+                  <% end %>
+                </p>
+                <p class="card-texts">
+                  <strong>Téléphone :</strong> <%= user_app.phone %>
+                  <% if user_app.phone != current_user.phone %>
+                    <i class="alert-icon fa-solid fa-circle-exclamation" title="Téléphone non à jour"></i>
+                  <% end %>
+                </p>
+                <p class="card-texts">
+                  <strong>RIB :</strong> <%= user_app.rib %>
+                  <% if user_app.rib != current_user.rib %>
+                    <i class="alert-icon fa-solid fa-circle-exclamation" title="RIB non à jour"></i>
+                  <% end %>
+                </p>
+              </div>
+              <div>
+                <p class="card-texts">
+                  <strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %>
+                </p>
+                <p class="card-texts">
+                  <strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %>
+                </p>
+                <p class="card-texts">
+                  <strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %>
+                </p>
+              </div>
             </div>
-              </p>
-            </p>
-              <p class="card-texts"><strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %></p>
-              <p class="card-texts">
-              <strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %>
-              </p>
-              <p class="card-texts">
-                <strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %>
-              </p>
-          </div>
-
             <div class="redirect_links d-flex justify-content-end">
               <% if user_app.app.url_redirections.present? %>
                 <% if user_app.app.url_redirections["rib"].present? %>
@@ -95,10 +88,9 @@
                 <% end %>
               <% end %>
             </div>
+          </div>
 
-              </p>
         </div>
-            </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
