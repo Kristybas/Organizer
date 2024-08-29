@@ -4,40 +4,47 @@
   <%= simple_form_for @user_app do |f| %>
     <!-- Le champ Application ne sera pas modifiable -->
     <div class="form-group" id="appname" data-remove-target="input">
-      <p><%= @user_app.app.name %></p> <!-- Affiche le nom de l'application -->
+      <h2 class= "h2-titre"><%= @user_app.app.name %></h2>
     </div>
+      <hr class="thick-hr"><!-- Affiche le nom de l'application -->
 
     <!-- Nom modifiable -->
     <div class="form-group">
-      <label>Nom :</label>
-              <%= f.input :name, placeholder: "Nom", label: false, input_html: { value: current_user.first_name } %>
+            <div id= "modifform">
+              <%= f.input :name, placeholder: "Nom", label: "Nom", input_html: { value: current_user.first_name }, class: "inp-margin" %>
+            </div>
+
       </div>
 
     <!-- Téléphone modifiable -->
     <div class="form-group">
-      <label style="letter-spacing:1px">Téléphone :</label>
-              <%= f.input :phone, placeholder: "Téléphone", label: false, input_html: { value: current_user.phone } %>
+      <div id= "modifform">
+              <%= f.input :phone, placeholder: "Téléphone", label: "Téléphone", input_html: { value: current_user.phone }, class: "inp-margin" %>
+      </div>
 
     </div>
 
     <!-- Adresse modifiable -->
     <div class="form-group">
-      <label>Adresse :</label>
-              <%= f.input :address, placeholder: "Adresse", label: false, input_html: { value: current_user.address } %>
+      <div id= "modifform">
+              <%= f.input :address, placeholder: "Adresse", label: "Adresse", input_html: { value: current_user.address }, class: "inp-margin" %>
+      </div>
       </div>
 
 
     <!-- Email modifiable -->
     <div class="form-group">
-      <label>Email :</label>
-              <%= f.input :email, placeholder: "Email", label: false, input_html: { value: current_user.email } %>
-
+      <div id= "modifform">
+              <%= f.input :email, placeholder: "Email", label: "Email", input_html: { value: current_user.email }, class: "inp-margin" %>
+      </div>
     </div>
 
     <!-- RIB modifiable avec icône de visibilité -->
     <div class="form-group" data-controller="rib">
       <label>RIB :</label>
-              <%= f.input :rib, placeholder: "RIB", label: false, input_html: { value: current_user.rib, class: "d-none", data: { rib_target: "decrypt" } } %>
+      <div id= "modifform">
+              <%= f.input :rib, placeholder: "RIB", label: false, input_html: { value: current_user.rib, class: "d-none", data: { rib_target: "decrypt" } }, class: "inp-margin" %>
+        </div>
         <span class="info" data-rib-target="encrypt"><%= current_user.encrypt_rib %></span>
         <i class="fa-solid fa-eye" data-action="click->rib#toggle"></i>
 
@@ -46,6 +53,7 @@
     <!-- Dates de prélèvement et de renouvellement -->
     <div class="d-flex justify-content-between" id="center">
       <div id="date">
+
         <%= f.input :date_prelevement, placeholder: "Date de prélèvement", label: 'Date de prélèvement', as: :date, html5: true %>
         <%= f.input :date_renouvellement, placeholder: "Date de renouvellement", label: 'Date de renouvellement', as: :date, html5: true %>
       </div>

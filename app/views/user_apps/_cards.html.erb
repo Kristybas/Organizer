@@ -19,10 +19,10 @@
           </div>
           <div class="app-info">
             <p class="pe-3">
-              <strong>Adresse :</strong> <%= current_user.address %>
+              <strong>Adresse </strong> <%= current_user.address %>
             </p>
             <p class="pe-5">
-              <strong>Email :</strong> <%= current_user.email %>
+              <strong>Email </strong> <%= current_user.email %>
             </p>
             <%= link_to edit_user_app_path(user_app) do %>
               <i class="fa-regular fa-pen-to-square"></i>
@@ -38,26 +38,26 @@
             <div class="card-text d-flex align-items-baseline justify-content-around">
               <div>
                 <p class="card-texts">
-                  <strong>Adresse :</strong> <%= user_app.address %>
+                  <strong>Adresse</strong> <%= user_app.address %>
                   <% if user_app.address != current_user.address %>
                     <i class="alert-icon fa-solid fa-circle-exclamation" title="Adresse non à jour"></i>
                   <% end %>
                 </p>
                 <p class="card-texts">
-                  <strong>Email :</strong> <%= user_app.email %>
+                  <strong>Email </strong> <%= user_app.email %>
                   <% if user_app.email != current_user.email %>
                     <i class="alert-icon fa-solid fa-circle-exclamation" title="Email non à jour"></i>
                   <% end %>
                 </p>
                 <p class="card-texts">
-                  <strong>Téléphone :</strong> <%= user_app.phone %>
+                  <strong>Téléphone </strong> <%= user_app.phone %>
                   <% if user_app.phone != current_user.phone %>
                     <i class="alert-icon fa-solid fa-circle-exclamation" title="Téléphone non à jour"></i>
                   <% end %>
                 </p>
                 <p class="card-texts">
 
-                  <strong>RIB :</strong>
+                  <strong>RIB </strong>
                   <span class="d-none info" data-rib-target="decrypt"><%= user_app.rib %></span>
                   <span class="info" data-rib-target="encrypt"><%= user_app.encrypt_rib %></span>
                   <i class="fa-solid fa-eye" data-action="click->rib#toggle" style="margin-left: 10px;"></i>
@@ -69,25 +69,25 @@
               </div>
               <div>
                 <p class="card-texts">
-                  <strong>Date de prélèvement :</strong> <%= user_app.date_prelevement %>
+                  <strong>Date de prélèvement </strong> <%= user_app.date_prelevement %>
                 </p>
                 <p class="card-texts">
-                  <strong>Date de renouvellement :</strong> <%= user_app.date_renouvellement %>
+                  <strong>Date de renouvellement </strong> <%= user_app.date_renouvellement %>
                 </p>
                 <p class="card-texts">
-                  <strong>Montant :</strong> <%= number_to_currency(user_app.montant, unit: "€") %>
+                  <strong>Montant </strong> <%= number_to_currency(user_app.montant, unit: "€") %>
                 </p>
               </div>
             </div>
             <div class="redirect_links d-flex justify-content-end">
               <% if user_app.app.url_redirections.present? %>
                 <% if user_app.app.url_redirections["rib"].present? %>
-                  <%= link_to user_app.app.url_redirections["rib"], target: "_blank", class: 'btn btn-dark ml-2' do %>
+                  <%= link_to user_app.app.url_redirections["rib"], target: "_blank", class: "submit-button" do %>
                     <i class="redirect fa-solid fa-building-columns mr-2"></i> Changer votre rib sur le site  <%= user_app.app.name %>
                   <% end %>
                 <% end %>
                 <% if user_app.app.url_redirections["address"].present? %>
-                  <%= link_to user_app.app.url_redirections["address"], target: "_blank", class: 'btn btn-dark ml-2' do %>
+                  <%= link_to user_app.app.url_redirections["address"], target: "_blank", class: "submit-button" do %>
                     <i class="redirect fa-solid fa-house mr-2"></i> Changer votre adresse sur le site <%= user_app.app.name %>
                   <% end %>
                 <% end %>
