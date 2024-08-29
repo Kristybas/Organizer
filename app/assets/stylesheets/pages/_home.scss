@@ -7,6 +7,21 @@
   padding-top: 10px;
   border-radius: 5px;
 }
+#user_rib {
+
+  width: 250px;
+  }
+
+
+
+#user_address {
+  max-height: max-content;
+  width: 250px;
+}
+#user_phone {
+
+  width: 250px;
+}
 
 .banner {
   margin: 20px auto 20px auto;
@@ -76,6 +91,11 @@
   margin-top: 25px;
   text-align: center;
 
+}
+
+#searchdesign {
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 #titrebanner {
@@ -150,7 +170,7 @@ a {
   background-color: white;
   border: #ccc solid 1px;
   padding: 20px;
-  margin: auto;
+  margin: 60px auto 20px auto;
 
 
 
@@ -176,7 +196,7 @@ h3 {
 
 #ajouter-une-demarche {
   display: flex;
-  margin-right: 40px;
+  margin-right: 60px;
   justify-content: flex-end;
   margin-bottom: 10px;
 }
