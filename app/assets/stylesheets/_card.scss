@@ -124,3 +124,15 @@ strong {
   display: flex;
   justify-items: center;
 }
+
+.app-info {
+  display: flex;
+  align-items: center;
+}
+
+.alert-icons {
+  margin-left: 8px;
+  /* Espace entre le titre et l'icône */
+  color: #ff0000;
+  /* Couleur de l'icône d'alerte */
+}
