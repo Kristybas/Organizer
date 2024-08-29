@@ -58,7 +58,7 @@ puts "Created #{User.count} users."
 p "creating EDF app"
 
 edf = App.new
-edf.logo = "edf.png"
+edf.logo = "/app/assets/images/edf.png"
 
 edf.name = "EDF"
 edf.url_redirections = {
@@ -72,7 +72,7 @@ edf.save!
 p "creating ENGIE app"
 
 engie = App.new
-engie.logo = "engie.jpg"
+engie.logo = "/app/assets/images/engie.jpg"
 
 engie.name =	"ENGIE"
 engie.url_redirections = {
@@ -85,7 +85,7 @@ engie.save!
 p "creating ENI app"
 
 eni = App.new
-eni.logo = "eni.png"
+eni.logo = "/app/assets/images/eni.png"
 
 eni.name = "ENI"
 eni.url_redirections ={
@@ -102,7 +102,7 @@ eni.save!
 p "creating Impot app"
 
 impot_gouv = App.new
-impot_gouv.logo = "impot.jpg"
+impot_gouv.logo = "/app/assets/images/impot.jpg"
 
 impot_gouv.name = "Impot gouv"
 impot_gouv.url_redirections = {
@@ -117,7 +117,7 @@ impot_gouv.save!
 p"creating AMELI app"
 
 ameli = App.new
-ameli.logo = "ameli.png"
+ameli.logo = "/app/assets/images/ameli.png"
 
 ameli.name = "Ameli"
 ameli.url_redirections = {
@@ -132,7 +132,7 @@ ameli.save!
 p "creating France Travail app"
 
 france_travail = App.new
-france_travail.logo = "francetravail.png"
+france_travail.logo = "/app/assets/images/francetravail.png"
 
 france_travail.name = "France Travail"
 france_travail.url_redirections = {
@@ -147,7 +147,7 @@ france_travail.save!
 p "creating CAF app"
 
 caf = App.new
-caf.logo = "caf.png"
+caf.logo = "/app/assets/images/caf.png"
 
 caf.name = "Caf"
 caf.url_redirections = {
@@ -162,7 +162,7 @@ caf.save!
 p "creating La POSTE app"
 
 laposte = App.new
-laposte.logo = "laposte.jpg"
+laposte.logo = "/app/assets/images/laposte.jpg"
 
 laposte.name = "laPoste"
 laposte.url_redirections = {
@@ -176,7 +176,7 @@ laposte.save!
 p "creating generali app"
 
 generali = App.new
-generali.logo = "generali.jpg"
+generali.logo = "/app/assets/images/generali.jpg"
 
 generali.name = "Generali"
 generali.url_redirections = {
@@ -190,7 +190,7 @@ generali.save!
 p "creating MACSF app"
 
 macsf = App.new
-macsf.logo = "macsf.jpg"
+macsf.logo = "/app/assets/images/macsf.jpg"
 
 macsf.name = "MACSF"
 macsf.url_redirections = {
@@ -204,7 +204,7 @@ macsf.save!
 p "creating Swisslife app"
 
 swisslife = App.new
-swisslife.logo = "swisslife.png"
+swisslife.logo = "/app/assets/images/swisslife.png"
 
 swisslife.name = "Swisslife"
 swisslife.url_redirections = {
@@ -220,7 +220,7 @@ swisslife.save!
 p "creating Allianz app"
 
 allianz = App.new
-allianz.logo = "allianz.jpg"
+allianz.logo = "/app/assets/images/allianz.jpg"
 
 allianz.name = "Allianz"
 allianz.url_redirections = {
@@ -237,7 +237,7 @@ allianz.save!
 p "creating Crédit Agricole app"
 
 credit_agricole = App.new
-credit_agricole.logo = "creditagricole.jpg"
+credit_agricole.logo = "/app/assets/images/creditagricole.jpg"
 
 credit_agricole.name = "Credit Agricole"
 credit_agricole.url_redirections = {
@@ -252,7 +252,7 @@ credit_agricole.save!
 p "creating  BNP app"
 
 bnp = App.new
-bnp.logo = "bnp.jpg"
+bnp.logo = "/app/assets/images/bnp.jpg"
 
 bnp.name = "BNP"
 bnp.url_redirections = {
@@ -266,7 +266,7 @@ bnp.save!
 p "creating  HelloBank app"
 
 hellobank = App.new
-hellobank.logo = "hellobank.jpg"
+hellobank.logo = "/app/assets/images/hellobank.jpg"
 
 hellobank.name = "HelloBank"
 hellobank.url_redirections = {
@@ -281,7 +281,7 @@ hellobank.save!
 p "creating  Societe Generale app"
 
 societe_generale = App.new
-societe_generale.logo = "societe_generale.png"
+societe_generale.logo = "/app/assets/images/societe_generale.png"
 societe_generale.name = "societe generale"
 societe_generale.url_redirections ={
  addresse:"https://particuliers.sg.fr/nos-conseils/comptes-et-cartes/demenage-change-banque" ,
@@ -295,7 +295,7 @@ societe_generale.save!
 p "creating SFR app"
 
 sfr = App.new
-sfr.logo = "sfr.jpg"
+sfr.logo = "/app/assets/images/sfr.jpg"
 
 sfr.name = "SFR"
 sfr.url_redirections = {
@@ -309,7 +309,7 @@ sfr.save!
 p "creating ORANGE app"
 
 orange = App.new
-orange.logo = "orange.png"
+orange.logo = "/app/assets/images/orange.png"
 
 orange.name = "Orange"
 orange.url_redirections = {
@@ -323,7 +323,7 @@ orange.save!
 p "creating FREE app"
 
 free = App.new
-free.logo = "free.png"
+free.logo = "/app/assets/images/free.png"
 
 free.name = "Free"
 free.url_redirections = {
@@ -337,7 +337,7 @@ free.save!
 p "creating Bouygues Telecom app"
 
 bouyguestelecom = App.new
-bouyguestelecom.logo = "bouyguestelecom.jpg"
+bouyguestelecom.logo = "/app/assets/images/bouyguestelecom.jpg"
 
 bouyguestelecom.name = "BouyguesTelecom"
 bouyguestelecom.url_redirections = {
@@ -351,7 +351,7 @@ bouyguestelecom.save!
   p "creating SOSH app"
 
 sosh = App.new
-sosh.logo = "sosh.png"
+sosh.logo = "/app/assets/images/sosh.png"
 
 sosh.name = "Sosh"
 sosh.url_redirections = {
@@ -365,7 +365,7 @@ sosh.save!
 p "creating Disney app"
 
 disney = App.new
-disney.logo = "disney.png"
+disney.logo = "/app/assets/images/disney.png"
 
 disney.name = "Disney"
 disney.url_redirections = {
@@ -379,7 +379,7 @@ p "creating Amazon app"
 
 
 amazon = App.new
-amazon.logo = "amazon.png"
+amazon.logo = "/app/assets/images/amazon.png"
 
 amazon.name = "Amazon"
 amazon.url_redirections = {
@@ -391,7 +391,7 @@ amazon.save!
 p "creating Spotify app"
 
 spotify = App.new
-spotify.logo = "spotify.png"
+spotify.logo = "/app/assets/images/spotify.png"
 
 spotify.name = "Spotify"
 spotify.url_redirections = {
@@ -406,7 +406,7 @@ spotify.save!
 p "creating Netflix app"
 
 netflix = App.new
-netflix.logo = "netflix.jpg"
+netflix.logo = "/app/assets/images/netflix.jpg"
 
 netflix.name = "Netflix"
 netflix.url_redirections = {
