@@ -281,10 +281,9 @@ hellobank.save!
 p "creating  Societe Generale app"
 
 societe_generale = App.new
-societe_generale.logo = "societegeneral.png"
-
-societe_generale.name = "Societe generale"
-societe_generale.url_redirections = {
+societe_generale.logo = "societe_generale.png"
+societe_generale.name = "societe generale"
+societe_generale.url_redirections ={
  addresse:"https://particuliers.sg.fr/nos-conseils/comptes-et-cartes/demenage-change-banque" ,
  rib: "https://particuliers.sg.fr/services-en-ligne/mobilite-bancaire-service-bienvenue"
 }
