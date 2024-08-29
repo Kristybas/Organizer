@@ -10,7 +10,7 @@
 
     <!-- Nom modifiable -->
     <div class="form-group">
-            <div id= "modifform">
+            <div id= "modifform" class="input-label-bold">
               <%= f.input :name, placeholder: "Nom", label: "Nom", input_html: { value: current_user.first_name }, class: "inp-margin" %>
             </div>
 
@@ -18,32 +18,32 @@
 
     <!-- Téléphone modifiable -->
     <div class="form-group">
-      <div id= "modifform">
+      <div id= "modifform" class="input-label-bold">
               <%= f.input :phone, placeholder: "Téléphone", label: "Téléphone", input_html: { value: current_user.phone }, class: "inp-margin" %>
       </div>
 
     </div>
 
     <!-- Adresse modifiable -->
-    <div class="form-group">
-      <div id= "modifform">
+    <div class="form-group-text">
+      <div id= "modifform" class="input-label-bold">
               <%= f.input :address, placeholder: "Adresse", label: "Adresse", input_html: { value: current_user.address }, class: "inp-margin" %>
       </div>
       </div>
 
 
     <!-- Email modifiable -->
-    <div class="form-group">
-      <div id= "modifform">
+    <div class="form-group-text">
+      <div id= "modifform" class="input-label-bold">
               <%= f.input :email, placeholder: "Email", label: "Email", input_html: { value: current_user.email }, class: "inp-margin" %>
       </div>
     </div>
 
     <!-- RIB modifiable avec icône de visibilité -->
     <div class="form-group" data-controller="rib">
-      <label>RIB :</label>
-      <div id= "modifform">
-              <%= f.input :rib, placeholder: "RIB", label: false, input_html: { value: current_user.rib, class: "d-none", data: { rib_target: "decrypt" } }, class: "inp-margin" %>
+
+      <div id= "modifform" class="input-label-bold">
+              <%= f.input :rib, placeholder: "RIB", label: "RIB", input_html: { value: current_user.rib, class: "d-none", data: { rib_target: "decrypt" } }, class: "inp-margin" %>
         </div>
         <span class="info" data-rib-target="encrypt"><%= current_user.encrypt_rib %></span>
         <i class="fa-solid fa-eye" data-action="click->rib#toggle"></i>
@@ -51,17 +51,15 @@
     </div>
 
     <!-- Dates de prélèvement et de renouvellement -->
-    <div class="d-flex justify-content-between" id="center">
-      <div id="date">
-
+      <div id="date" class="input-label-bold">
         <%= f.input :date_prelevement, placeholder: "Date de prélèvement", label: 'Date de prélèvement', as: :date, html5: true %>
         <%= f.input :date_renouvellement, placeholder: "Date de renouvellement", label: 'Date de renouvellement', as: :date, html5: true %>
       </div>
-    </div>
+
 
     <!-- Montant modifiable -->
-    <div id="montant">
-      <%= f.input :montant, placeholder: "Montant", label: false %>
+    <div id="montant" class="input-label-bold"  >
+      <%= f.input :montant, placeholder: "Montant", label: "Montant" %>
     </div>
 
     <!-- Bouton Enregistrer -->

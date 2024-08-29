@@ -6,6 +6,7 @@
   border-radius: 5px;
   background-color: white;
 }
+
 .card-container {
   margin-top: 15px;
 }
@@ -31,24 +32,22 @@
 }
 
 #date {
-  justify-content: space-between;
   display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 10px;
+
   margin: 10px 0;
 
   border-radius: 5px;
 }
 
-.form-group {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
+.input-label-bold {
+  label {
+    font-weight: bold;
+  }
 }
 
-.form-group label {
-  font-weight: bold;
-}
+
 
 .info {
   margin-left: 10px;
@@ -56,10 +55,7 @@
   /* Couleur du texte, ajustez selon vos préférences */
 }
 
-input {
-  width: auto;
-  margin-left: 10px;
-}
+
 
 input[type="text"] {
   width: 100%;
@@ -136,9 +132,7 @@ input[type="text"] {
   align-items: center;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
+
 
 input[type="file"] {
   display: block;
