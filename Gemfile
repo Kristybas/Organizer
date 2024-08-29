@@ -78,4 +78,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "noticed", "~> 2.4"
+# gem "noticed", "~> 2.4"
