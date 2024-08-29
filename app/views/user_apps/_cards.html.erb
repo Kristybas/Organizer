@@ -32,7 +32,6 @@
             <% end %>
           </div>
         </div>
-
         <div class="card little-card" id="userCard" style="cursor: pointer; width: 100%;">
           <div id="moreInfo" style="display: none;">
             <!-- Contenu caché affiché après clic -->
@@ -57,10 +56,12 @@
                   <% end %>
                 </p>
                 <p class="card-texts">
+
                   <strong>RIB :</strong>
                   <span class="d-none info" data-rib-target="decrypt"><%= user_app.rib %></span>
                   <span class="info" data-rib-target="encrypt"><%= user_app.encrypt_rib %></span>
                   <i class="fa-solid fa-eye" data-action="click->rib#toggle" style="margin-left: 10px;"></i>
+
                   <% if user_app.rib != current_user.rib %>
                     <i class="alert-icon fa-solid fa-circle-exclamation" title="RIB non à jour"></i>
                   <% end %>
@@ -82,12 +83,12 @@
               <% if user_app.app.url_redirections.present? %>
                 <% if user_app.app.url_redirections["rib"].present? %>
                   <%= link_to user_app.app.url_redirections["rib"], target: "_blank", class: 'btn btn-dark ml-2' do %>
-                    <i class="redirect fa-solid fa-building-columns mr-2"></i> Cliquez ici pour aller sur le site de <%= user_app.app.name %>
+                    <i class="redirect fa-solid fa-building-columns mr-2"></i> Changer votre rib sur le site  <%= user_app.app.name %>
                   <% end %>
                 <% end %>
                 <% if user_app.app.url_redirections["address"].present? %>
                   <%= link_to user_app.app.url_redirections["address"], target: "_blank", class: 'btn btn-dark ml-2' do %>
-                    <i class="redirect fa-solid fa-house mr-2"></i> Cliquez ici pour aller sur le site de <%= user_app.app.name %>
+                    <i class="redirect fa-solid fa-house mr-2"></i> Changer votre adresse sur le site <%= user_app.app.name %>
                   <% end %>
                 <% end %>
               <% end %>
