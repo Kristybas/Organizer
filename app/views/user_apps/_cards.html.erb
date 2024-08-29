@@ -38,7 +38,7 @@
         <div class="card little-card" id="userCard" style="cursor: pointer; width: 100%;">
           <div id="moreInfo" style="display: none;">
             <!-- Contenu caché affiché après clic -->
-            <p class="card-texts-container">
+            <p class="card-text d-flex align-items-center">
               <p class="card-texts">
               <strong>Adresse :</strong> <%= user_app.address %>
               <% if user_app.address != current_user.address %>
@@ -82,8 +82,7 @@
               <% end %>
             </div>
               </p>
-
-            /div>
+          </div>
         </div>
             </div>
       <% end %>
