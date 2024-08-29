@@ -187,10 +187,17 @@ hr {
 
 }
 
+.h2-titre {
+  text-align: center;
+}
+
 .thick-hr {
-  color: #FFD18E;
   height: 20px;
   width: 250px;
+  border: none;
+  height: 5px;
+  background-color: #FFD18E;
+  margin: auto;
 }
 
 .form-group {
