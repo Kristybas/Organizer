@@ -38,7 +38,7 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 20px;
-  width: 77vw;
+  width: 72vw;
 }
 
 .app-info {
@@ -58,7 +58,7 @@
 
 .change-count {
   font-size: 17px;
-  padding-left: 60px;
+  padding-left: 45px;
   color: #FFD18E;
 }
 
@@ -96,6 +96,23 @@
 
 .redirect {
   margin-right: 10px;
+
+}
+
+.submit-button {
+  background-color: #ffe9c7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #f0c98d;
+  }
 }
 
 .btn {
@@ -118,4 +135,5 @@
 strong {
   font-size: 18px;
   font-weight: bold;
+  margin-left: 15px;
 }
