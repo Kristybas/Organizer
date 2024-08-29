@@ -9,7 +9,7 @@
               <%= image_tag "#{user_app.app.name.downcase.gsub(" ","")}.png", alt: user_app.name, class: "card-img-top" if asset_exists?("#{user_app.app.name.downcase.gsub(" ","")}.png") %>
             </div>
             <div class="name-count">
-              <span class="fs-4"><%= user_app.app.name %></span>
+              <span class="fs-3"><%= user_app.app.name %></span>
                <% if changes_count > 0 %>
               <span class="change-count"><i class="alert-icons fa-solid fa-circle-exclamation"></i>
               <%= changes_count %> changement<%= 's' if changes_count > 1 %></span>
@@ -38,7 +38,7 @@
         <div class="card little-card" id="userCard" style="cursor: pointer; width: 100%;">
           <div id="moreInfo" style="display: none;">
             <!-- Contenu caché affiché après clic -->
-            <p class="card-text d-flex align-items-center">
+            <p class="card-texts-container">
               <p class="card-texts">
               <strong>Adresse :</strong> <%= user_app.address %>
               <% if user_app.address != current_user.address %>
@@ -82,7 +82,8 @@
               <% end %>
             </div>
               </p>
-          </div>
+
+            /div>
         </div>
             </div>
       <% end %>
