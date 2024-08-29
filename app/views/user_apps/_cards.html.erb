@@ -78,19 +78,19 @@
               <% if user_app.app.url_redirections.present? %>
                 <% if user_app.app.url_redirections["rib"].present? %>
                   <%= link_to user_app.app.url_redirections["rib"], target: "_blank", class: 'btn btn-dark ml-2' do %>
-                    <i class="redirect fa-solid fa-building-columns mr-2"></i> Cliquez ici pour aller sur le site de <%= user_app.app.name %>
+                    <i class="redirect fa-solid fa-building-columns mr-2"></i> Changer votre rib sur le site  <%= user_app.app.name %>
                   <% end %>
                 <% end %>
                 <% if user_app.app.url_redirections["address"].present? %>
                   <%= link_to user_app.app.url_redirections["address"], target: "_blank", class: 'btn btn-dark ml-2' do %>
-                    <i class="redirect fa-solid fa-house mr-2"></i> Cliquez ici pour aller sur le site de <%= user_app.app.name %>
+                    <i class="redirect fa-solid fa-house mr-2"></i> Changer votre adresse sur le site <%= user_app.app.name %>
                   <% end %>
                 <% end %>
               <% end %>
             </div>
           </div>
-
         </div>
       </div>
     <% end %>
   </div>
+</div>
