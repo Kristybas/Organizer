@@ -3,8 +3,8 @@
   justify-content: center;
   display: flex;
 
-  .submit-button {
-    background-color: #ffe9c7;
+  #f0c98d .submit-button {
+    background-color: #f0c98d;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -14,11 +14,14 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #f0c98d;
+      background-color: #ffe9c7;
     }
   }
 }
 
+.inp-margin {
+  width: 100%;
+}
 
 .fa-solid {
   font-weight: 900;
@@ -26,11 +29,12 @@
   cursor: pointer;
 }
 
-#modifform {
-  width: 100%;
 
-  input:focus {
-    border: 4px solid #FFD18E; // Bordure de 4px avec la couleur spécifiée
-    outline: none; // Supprime le contour par défaut des navigateurs
-  }
-}
+
+// #modifform {
+
+//   input:focus {
+//     border: 4px solid #FFD18E; // Bordure de 4px avec la couleur spécifiée
+//     outline: none; // Supprime le contour par défaut des navigateurs
+//   }
+// }
