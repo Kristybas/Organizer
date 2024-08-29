@@ -20,8 +20,6 @@ export default class extends Controller {
     // }
 
     if (event.currentTarget.classList.contains("expanded")) {
-
-
       event.currentTarget.classList.remove("expanded");
       event.currentTarget.querySelector("#moreInfo").style.display = "none";
     }

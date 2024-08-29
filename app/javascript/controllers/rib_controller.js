@@ -9,8 +9,11 @@ export default class extends Controller {
     console.log("Rib controller connected");
   }
 
-  toggle() {
+  toggle(event) {
     this.encryptTarget.classList.toggle("d-none")
     this.decryptTarget.classList.toggle("d-none")
   }
+
+
+
 }

@@ -56,7 +56,12 @@
                   <% end %>
                 </p>
                 <p class="card-texts">
-                  <strong>RIB :</strong> <%= user_app.rib %>
+
+                  <strong>RIB :</strong>
+                  <span class="d-none info" data-rib-target="decrypt"><%= user_app.rib %></span>
+                  <span class="info" data-rib-target="encrypt"><%= user_app.encrypt_rib %></span>
+                  <i class="fa-solid fa-eye" data-action="click->rib#toggle" style="margin-left: 10px;"></i>
+
                   <% if user_app.rib != current_user.rib %>
                     <i class="alert-icon fa-solid fa-circle-exclamation" title="RIB non à jour"></i>
                   <% end %>
