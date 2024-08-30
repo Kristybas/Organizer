@@ -284,7 +284,7 @@ societe_generale = App.new
 societe_generale.logo = "/app/assets/images/societe_generale.png"
 societe_generale.name = "societe generale"
 societe_generale.url_redirections ={
- addresse:"https://particuliers.sg.fr/nos-conseils/comptes-et-cartes/demenage-change-banque" ,
+ address:"https://particuliers.sg.fr/nos-conseils/comptes-et-cartes/demenage-change-banque" ,
  rib: "https://particuliers.sg.fr/services-en-ligne/mobilite-bancaire-service-bienvenue"
 }
 
@@ -299,7 +299,7 @@ sfr.logo = "/app/assets/images/sfr.jpg"
 
 sfr.name = "SFR"
 sfr.url_redirections = {
-  addresse: "https://www.sfr.fr/offre-internet/demenagement?esl-k=google%7Cng%7Cc443888133540%7Cmp%7Ckd%C3%A9m%C3%A9nagement%20sfr%7Cp%7Ct%7Cdc%7Ca105645464840%7Cg10371243279&gclsrc=aw.ds&sfrcpid=t1_google_fixe&utm_source=google&utm_medium=cpc&utm_campaign=m_fixe&utm_term=&utm_content=&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNiPci-kbJHzepewqPvkZaTG52W09zz3Hho8UpppHxHRHecti0EGYwaAs4JEALw_wcB&r=61670133" ,
+  address: "https://www.sfr.fr/offre-internet/demenagement?esl-k=google%7Cng%7Cc443888133540%7Cmp%7Ckd%C3%A9m%C3%A9nagement%20sfr%7Cp%7Ct%7Cdc%7Ca105645464840%7Cg10371243279&gclsrc=aw.ds&sfrcpid=t1_google_fixe&utm_source=google&utm_medium=cpc&utm_campaign=m_fixe&utm_term=&utm_content=&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNiPci-kbJHzepewqPvkZaTG52W09zz3Hho8UpppHxHRHecti0EGYwaAs4JEALw_wcB&r=61670133" ,
   rib: "https://assistance.sfr.fr/gestion-client/offre-contrat/maj-coordonnees-bancaires-espace-client.html"
  }
 
@@ -313,7 +313,7 @@ orange.logo = "/app/assets/images/orange.png"
 
 orange.name = "Orange"
 orange.url_redirections = {
-  addresse: "https://www.orange.be/fr/produits-et-services/internet-tv-mobile/demenagement-love?utm_source=google&utm_medium=cpc&utm_campaign=b2c-act-fr-love-overview-alwayson-bra-movers&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnMTi60Iv42i1gtsKfnYSrvCaQGvvLdX2kgKii0Lq-7DHBrQPxZQCjYaAofCEALw_wcB" ,
+  address: "https://www.orange.be/fr/produits-et-services/internet-tv-mobile/demenagement-love?utm_source=google&utm_medium=cpc&utm_campaign=b2c-act-fr-love-overview-alwayson-bra-movers&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnMTi60Iv42i1gtsKfnYSrvCaQGvvLdX2kgKii0Lq-7DHBrQPxZQCjYaAofCEALw_wcB" ,
   rib: "https://orangeetmoi.orange.fr/"
   }
 
@@ -327,7 +327,7 @@ free.logo = "/app/assets/images/free.png"
 
 free.name = "Free"
 free.url_redirections = {
-  addresse: "https://www.free.fr/freebox/demenagement/" ,
+  address: "https://www.free.fr/freebox/demenagement/" ,
   rib: "https://assistance.free.fr/articles/904"
  }
 free.save!
@@ -341,7 +341,7 @@ bouyguestelecom.logo = "/app/assets/images/bouyguestelecom.jpg"
 
 bouyguestelecom.name = "BouyguesTelecom"
 bouyguestelecom.url_redirections = {
-   addresse: "https://www.bouyguestelecom.fr/offres-internet/demenagement" ,
+   address: "https://www.bouyguestelecom.fr/offres-internet/demenagement" ,
    rib: "https://www.assistance.bouyguestelecom.fr/s/article/coordonnees-bancaires-adresse-facturation"
   }
 bouyguestelecom.save!
@@ -355,7 +355,7 @@ sosh.logo = "/app/assets/images/sosh.png"
 
 sosh.name = "Sosh"
 sosh.url_redirections = {
-   addresse: "https://shop.sosh.fr/demenagement" ,
+   address: "https://shop.sosh.fr/demenagement" ,
    rib: "https://communaute.sosh.fr/t5/Ma-facture-mon-paiement-Mon/Changement-de-compte-bancaire-pour-pr%C3%A9l%C3%A8vements/td-p/2357610"
   }
 sosh.save!
@@ -369,7 +369,7 @@ disney.logo = "/app/assets/images/disney.png"
 
 disney.name = "Disney"
 disney.url_redirections = {
-  addresse: "https://www.disneyplus.com/identity/login/enter-email?pinned=true"
+  address: "https://www.disneyplus.com/identity/login/enter-email?pinned=true"
 }
 disney.save!
 
@@ -383,7 +383,7 @@ amazon.logo = "/app/assets/images/amazon.png"
 
 amazon.name = "Amazon"
 amazon.url_redirections = {
-  addresse: "https://www.amazon.fr/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.fr%2Fcompte%2Fs%3Fk%3Dvotre%2Bcompte%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=frflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+  address: "https://www.amazon.fr/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.fr%2Fcompte%2Fs%3Fk%3Dvotre%2Bcompte%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=frflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
 }
 amazon.save!
 
@@ -395,7 +395,7 @@ spotify.logo = "/app/assets/images/spotify.png"
 
 spotify.name = "Spotify"
 spotify.url_redirections = {
- addresse: "https://accounts.spotify.com/fr/login" ,
+ address: "https://accounts.spotify.com/fr/login" ,
  rib: "https://support.spotify.com/fr/article/update-payment-details/"
 
 }
@@ -410,7 +410,7 @@ netflix.logo = "/app/assets/images/netflix.jpg"
 
 netflix.name = "Netflix"
 netflix.url_redirections = {
-  addresse: "https://www.netflix.com/login" ,
+  address: "https://www.netflix.com/login" ,
   rib: "https://help.netflix.com/fr/node/244"
 
 }
