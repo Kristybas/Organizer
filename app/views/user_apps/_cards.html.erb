@@ -1,5 +1,5 @@
 <div class="container-all" data-controller="hello">
-  <div class="">
+  <div class="fix">
     <% @user_apps.each do |user_app_data| %>
       <% user_app, changes_count = user_app_data %>
       <div class="card-container card-app" data-action="click->hello#grow">
