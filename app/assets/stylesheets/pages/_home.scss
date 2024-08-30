@@ -68,8 +68,7 @@
 .search-bar input[type="text"] {
   width: 850px;
   height: 40px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px;
   border: 1px solid #ccc;
   padding: 10px;
   margin-left: 150px;
@@ -84,7 +83,9 @@
   /* Arrondir les bords gauche */
 }
 
-
+#recherche2 {
+  height: 40px;
+}
 
 #titre {
   margin-top: 25px;
